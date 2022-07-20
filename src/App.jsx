@@ -1,12 +1,27 @@
 import "./App.css";
 import Avatar from "./components/avatar/Avatar";
+import Projects from "./components/projects/Projects";
+
+window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  },
+  false
+);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <Avatar />
-      </header>
+      </div>
+      <div className="App-body">
+        <Projects />
+      </div>
     </div>
   );
 }
