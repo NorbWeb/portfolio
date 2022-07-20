@@ -1,10 +1,11 @@
 import "./App.css";
+import Avatar from "./components/avatar/Avatar";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>My portfolio</p>
+        <Avatar />
       </header>
     </div>
   );
