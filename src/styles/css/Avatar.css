@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: fit-content;
+  height: 10ch;
   width: fit-content;
+  background-color: #323027;
+  padding-top: 2ch;
 }
 
 .avatar-image {
@@ -18,35 +20,46 @@
   animation-fill-mode: both;
 }
 
+@keyframes shift-img {
+  to {
+    transform: scale(0.6) translate(220%, -300%) rotate(200deg);
+  }
+}
 .avatar-title {
-  position: absolute;
+  position: relative;
   top: 120px;
-  color: #007599;
+  color: #2ebbe6;
   font-size: 1rem;
-  animation: shift-title 1s linear infinite;
+  animation: shift-title 0.5s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
 
+@keyframes shift-title {
+  from {
+    color: #2ebbe6;
+  }
+  to {
+    transform: scale(0.6) translate(160%, -370%);
+    color: #e68a2e;
+  }
+}
 .avatar-text {
   width: 75%;
   text-align: left;
-  padding-top: 200px;
+  padding-top: 120px;
+  animation: shift-text 0.5s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
-@keyframes shift-img {
+@keyframes shift-text {
   to {
-    transform: scale(0.6) translate(220%, -300%) rotate(200deg);
-  }
-}
-@keyframes shift-title {
-  from {
-    color: #007599;
-  }
-  to {
-    transform: scale(0.6) translate(160%, -340%);
-    color: #e68a2e;
+    transform: scale(0.4) translate(200%, -70%);
+    opacity: 0;
   }
 }/*# sourceMappingURL=Avatar.css.map */

@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* height: calc(fit-content + 20px); */
   height: 130ch;
   padding-bottom: 4ch;
+  z-index: 1;
 }
 
 .card {

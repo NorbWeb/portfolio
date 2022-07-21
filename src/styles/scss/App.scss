@@ -1,36 +1,23 @@
+@import 'variables';
+
 .App {
   text-align: center;
   padding: calc(1vmin + 10px);
-  height: fit-content;
-  background-color: #323027;
+  padding-top: 0;
+  background-color: $background;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  color: #4dd5ff
+  color: $third;
 }
 
 .App-header {
-  top: 0;
-    bottom:0;
     position:fixed;
-    overflow-y:scroll;
-    overflow-x:hidden;
+    z-index: 4;
+
 }
 
 .App-body {
-position: relative;
-padding-top: 400px;
-
+  padding-top: 400px;
 }
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
