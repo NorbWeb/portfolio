@@ -1,6 +1,6 @@
-import "../../styles/css/Projects.css";
+import "../styles/css/Projects.css";
 
-function projects() {
+function Projects() {
   const count = [{ name: "Project 1" }, { name: "Project 2" }, { name: "Project 3" }];
 
   return (
@@ -21,4 +21,4 @@ function projects() {
   );
 }
 
-export default projects;
+export default Projects;

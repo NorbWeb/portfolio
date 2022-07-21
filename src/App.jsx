@@ -1,6 +1,7 @@
 import "./styles/css/App.css";
-import Avatar from "./components/avatar/Avatar";
-import Projects from "./components/projects/Projects";
+import Avatar from "./components/Avatar";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 window.addEventListener(
   "scroll",
@@ -20,6 +21,7 @@ function App() {
         <Avatar />
       </div>
       <div className="App-body">
+        <Skills />
         <Projects />
       </div>
     </div>
