@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/css/App.css";
 import Avatar from "./components/avatar/Avatar";
 import Projects from "./components/projects/Projects";
 

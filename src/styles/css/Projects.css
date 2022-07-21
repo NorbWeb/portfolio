@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   /* height: calc(fit-content + 20px); */
-  height: calc(3 * (40ch + 2ch) + 4ch);
+  height: 130ch;
   padding-bottom: 4ch;
 }
 
@@ -12,9 +12,10 @@
   display: inline;
   width: 85%;
   height: 40ch;
-  background-color: aquamarine;
+  background-color: #994d00;
 }
+
 .card-img-top {
   width: fit-content;
   height: fit-content;
-}
+}/*# sourceMappingURL=Projects.css.map */
