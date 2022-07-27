@@ -11,12 +11,12 @@
 
     h1 {
         color: #fff;
-        font-size: 53px;
+        font-size: 56px;
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
 
-        &::before {
+        &:before {
             content: '<h1>';
             font-family: 'La Belle Aurore';
             color: #ffd700;
@@ -27,7 +27,7 @@
             opacity: 0.6;
         }
 
-        &::after {
+        &:after {
             content: '<h1/>';
             font-family: 'La Belle Aurore';
             color: #ffd700;
