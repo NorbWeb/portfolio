@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-    const refForm = useRef();
+  const refForm = useRef()
 
   useEffect(() => {
     setTimeout(() => {
@@ -18,21 +18,21 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-    .sendForm(
+      .sendForm(
         'service_bnrwg44',
-        'template_7z4tiva',
+        'template_xrtjlfe',
         refForm.current,
         'gJKt689dLpsgkIsZ5'
-    )
-    .then(
+      )
+      .then(
         () => {
-            alert('Message successfully send!')
-            window.location.reload(false)
+          alert('Message successfully send!')
+          window.location.reload(false)
         },
         () => {
-            alert('Failed to send the message, please try again')
+          alert('Failed to send the message, please try again')
         }
-    )
+      )
   }
 
   return (
@@ -83,7 +83,7 @@ const Contact = () => {
                   ></textarea>
                 </li>
                 <li>
-                    <input type='submit' className='flat-button' value='SEND' />
+                  <input type="submit" className="flat-button" value="SEND" />
                 </li>
               </ul>
             </form>
