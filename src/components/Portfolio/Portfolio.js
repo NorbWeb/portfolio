@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
+import './Portfolio.scss'
 import porfolioData from '../../data/portfolio.json'
 
 const Portfolio = () => {
@@ -29,6 +29,14 @@ const Portfolio = () => {
                 className="portfolio-image"
                 alt={port.title}
               />
+              <div className='content'>
+                <p className='title'>{port.title}</p>
+                <h4 className='description'>{port.description}</h4>
+                <button
+                className='btn'
+                onClick={()=> window.open(port.url)}
+                >view</button>
+              </div>
             </div>
           )
         })}

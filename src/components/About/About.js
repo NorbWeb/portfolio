@@ -9,8 +9,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
+import './About.scss'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
