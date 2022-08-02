@@ -11,17 +11,21 @@
     min-height: 500px;
 
     .logo {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 8px 0;
 
         img {
-            display: block;
-            margin: 8px auto;
-            width: 24px;
+            width: 35px;
             height: auto;
+            padding: 3px 0;
+            margin-right: 3px;
 
             &.sub-logo {
-                width: 50px;
+                width: 55px;
+                padding: 4px 2px;
             }
         }
     }

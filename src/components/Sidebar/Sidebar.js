@@ -1,7 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 import './Sidebar.scss'
-import LogoS from '../../assets/images/logo-s.png'
-// import LogoSubtitle from '../../assets/images/logo-sub.png'
+import LogoN from '../../assets/images/letter-n2.png'
 import LogoName from '../../assets/images/name.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -20,7 +19,7 @@ const Sidebar = () => {
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
-        <img src={LogoS} alt="logo" />
+        <img src={LogoN} alt="logo" />
         <img className="sub-logo" src={LogoName} alt="logo-subtitle" />
       </Link>
       <nav>

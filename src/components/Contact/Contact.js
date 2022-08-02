@@ -48,11 +48,10 @@ const Contact = () => {
             />
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
+            Do you have some questions about coding, my work or my self? Do you
+            want to work with me or have some interesting ideas? Then just
+            contact me! I am looking forward to hearing from you. And if you
+            have a job offer, don't hesitate and hit the keys!{' '}
           </p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
@@ -95,17 +94,15 @@ const Contact = () => {
           <br />
           Germany,
           <br />
-          Teststreet 56,
+          Somewhere in Potsdam
           <br />
-          12000 Berlin
-          <br />
-          <span>email.adresse@info.com</span>
+          <span>norbert.madauss@gmail.com</span>
         </div>
         <div className="map-wrap">
           <MapContainer type="pacman" center={[52.394919, 13.060529]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[52.394919, 13.060529]}>
-              <Popup className='popup'>This is my position</Popup>
+              <Popup className="popup">This is not my position...</Popup>
             </Marker>
           </MapContainer>
         </div>

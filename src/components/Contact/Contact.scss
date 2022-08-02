@@ -60,14 +60,21 @@
     .flat-button {
         color: $primary-color;
         background: 0 0;
-        font: 11px;
+        font-size: 11px;
         letter-spacing: 3px;
         text-decoration: none;
         padding: 8px 10px;
         border: 1px solid $primary-color;
         float: right;
         border-radius: 4px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
+
+        &:hover {
+            color: #585858;
+            background-color: $primary-color;
+            transform: translateX(-3px);
+        }
     }
 
 }
