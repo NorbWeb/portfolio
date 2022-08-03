@@ -1,4 +1,4 @@
-import LogoN from '../../../assets/images/letter-n.png'
+import LogoN from '../../../assets/images/letter-n3.png'
 import './Logo.scss'
 
 const Logo = () => {

@@ -12,7 +12,7 @@
     }
 
     h1 {
-        color: #fff;
+        color: $primary-color;
         font-size: 53px;
         margin: 0;
         font-family: 'Coolvetica';
@@ -41,6 +41,14 @@
             opacity: 0.6;
         }
 
+        .letter-box {
+            display: inline-block;
+            animation-fill-mode: both;
+            &:hover {
+                animation: rubberBand 1s;
+            }
+        }
+
         img {
             position: relative;
             top: -3px;
@@ -50,11 +58,16 @@
             height: auto;
             animation: rotateIn 1s linear both;
             animation-delay: 1.4s;
+            animation-fill-mode: both;
+
+            // &:hover {
+            //     animation: rubberBand 1s;
+            // }
         }
     }
 
     h2 {
-        color: #8d8d8d;
+        color: #E66F45;
         margin-top: 20px;
         font-weight: 400;
         font-size: 11px;

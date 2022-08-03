@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 import './Sidebar.scss'
-import LogoN from '../../assets/images/letter-n2.png'
+import LogoN from '../../assets/images/letter-n3.png'
 import LogoName from '../../assets/images/name.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
