@@ -9,6 +9,9 @@
     left: auto;
     margin: auto;
     opacity: 0;
+    animation: myLogo 4s 1s forwards ease;
+    
+
 
     .solid-logo {
         position: absolute;
@@ -22,6 +25,13 @@
         z-index: 1;
         transform: rotate(4deg);
         margin-top: 30px;
+        animation: myLogo 4s 1s forwards ease;
+    }
+
+    @keyframes myLogo {
+        to {
+            opacity: 1;
+        }
     }
 }
 
