@@ -8,23 +8,31 @@ import {
   faHome,
   faUser,
   faSuitcase,
+  faBars,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faGithub,
   faLinkedin,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react'
 
 const Sidebar = () => {
+  const [open, setOpen] = useState(false)
+  const handleMenu = () => {
+    setOpen(!open)
+  }
+  console.log(open)
+
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
         <img src={LogoN} alt="logo" />
         <img className="sub-logo" src={LogoName} alt="logo-subtitle" />
       </Link>
-      <nav>
+      <nav className={open ? 'show' : null}>
         <NavLink exact="true" activeclassname="active" to="/">
-          <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faHome} />
         </NavLink>
         <NavLink
           exact="true"
@@ -32,7 +40,7 @@ const Sidebar = () => {
           className="about-link"
           to="/about"
         >
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faUser} />
         </NavLink>
         <NavLink
           exact="true"
@@ -40,7 +48,7 @@ const Sidebar = () => {
           className="portfolio-link"
           to="/portfolio"
         >
-          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faSuitcase} />
         </NavLink>
         <NavLink
           exact="true"
@@ -48,7 +56,7 @@ const Sidebar = () => {
           className="contact-link"
           to="/contact"
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
       </nav>
       <ul>
@@ -58,20 +66,23 @@ const Sidebar = () => {
             rel="noreferrer"
             href="https://www.linkedin.com/in/norbert-madauss/"
           >
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </li>
         <li>
           <a target="_blank" rel="noreferrer" href="https://github.com/NorbWeb">
-            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faGithub} />
           </a>
         </li>
         <li>
           <a target="_blank" rel="noreferrer" href="skype:live:norbert151086">
-            <FontAwesomeIcon icon={faSkype} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faSkype} />
           </a>
         </li>
       </ul>
+      <div className="mobile-menu" onClick={handleMenu}>
+        <FontAwesomeIcon icon={faBars} color="#4d4d4e" />
+      </div>
     </div>
   )
 }

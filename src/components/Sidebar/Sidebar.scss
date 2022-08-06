@@ -1,6 +1,8 @@
 @import '../../App.scss';
 
 
+
+
 .nav-bar {
     background: #272727;
     width: 60px;
@@ -9,6 +11,8 @@
     top: 0;
     z-index: 3;
     min-height: 500px;
+
+
 
     .logo {
         display: flex;
@@ -107,7 +111,7 @@
 
         a.active {
             svg {
-                color: $primary-color;
+                color: $hover-color;
             }
         }
     }
@@ -140,5 +144,180 @@
         }
     }
 
+    .mobile-menu {
+        display: none;
+    }
+
 }
 
+@media screen and (max-width: 960px) {
+    .nav-bar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 0;
+
+        .logo {
+            margin-left: 10px;
+            margin-top: 8px;
+    
+            img {
+                width: 25px;
+    
+                &.sub-logo {
+                    width: 45px;
+                }
+            }
+        }
+
+        nav {
+            top: 5px;
+            height: auto;
+            width: 42%;
+            margin: 0 10%;
+            margin-top: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            
+            svg {
+                display: flex;
+                flex-direction: column;
+                width: 60px;
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                width: 60px;
+
+                &:after {
+                    top:15px;
+                    position: absolute;
+                    width: 60px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 50px;
+                }
+            }
+
+           
+        }
+
+        ul  {
+            position: static;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            bottom: 0;
+            width: 100px;
+
+            li {
+                a {
+                    padding: 7px 0;
+                    font-size: 15px;
+                    line-height: 16px;
+                    
+                
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .nav-bar {
+        width: 100%;
+         height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 0;
+
+        .logo {
+            margin-left: 10px;
+    
+            img {
+                width: 25px;
+    
+                &.sub-logo {
+                    width: 45px;
+                }
+            }
+        }
+
+        .mobile-menu {
+            height: auto;
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            svg {
+                width: 30px;
+                height: 30px;
+                color: $primary-color;
+                font-weight: 600;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+           
+        }
+
+
+        nav.show {
+            opacity: 1;
+            left: 0;
+        }
+
+        nav {
+            top: 56px;
+            height: 60px;
+            width: 100%;
+            margin: 0;
+            left: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            background-color: #272727;
+            padding: auto;
+            position: fixed;
+            opacity: 0;
+            transition: all .3s ease-out;
+
+
+
+            a {
+                display: flex;
+                justify-content: flex-start;
+                top: 5px;
+
+                &:after {
+                    position: relative;
+                    width: 60px;
+                    display: flex;
+                    align-items: flex-start;
+                    top: -30px;
+                    justify-content: space-around;
+                }
+            }
+
+           
+        }
+
+        ul  {
+            display: none;
+        }
+
+    }
+}
