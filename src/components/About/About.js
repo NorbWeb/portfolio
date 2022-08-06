@@ -24,7 +24,7 @@ const About = () => {
 
   return (
     <>
-      <div className="container about-page">
+      <div className="container about-page" style={{transform: "matrix(1,0,0,1,0,0)"}}>
         <div className="text-zone">
           <h1>
             <AnimatedLetters
@@ -78,7 +78,6 @@ const About = () => {
               <FontAwesomeIcon
                 icon={faNodeJs}
                 color="#215732"
-                style={{ rotate: '270deg' }}
               />
             </div>
           </div>

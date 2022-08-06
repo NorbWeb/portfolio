@@ -11,6 +11,8 @@
     overflow: hidden;
 }
 
+
+
 .cubespinner {
     animation-name: spincube ;
     animation-timing-function: ease-in-out;
@@ -45,7 +47,7 @@
     }.face5 {
         transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
     }.face6 {
-        transform: rotateX(-90deg)  translateZ(100px);
+        transform: rotateX(-90deg)  rotateZ(270deg) translateZ(100px);
     }
 }
 
@@ -70,3 +72,10 @@
         transform: rotateY(90deg) rotateZ(90deg);
     }
 }
+
+@media (max-width: 960px){
+    .stage-cube-cont {
+        position: relative;
+        width: 100%;
+        height: 445px;
+    }}

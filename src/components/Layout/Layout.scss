@@ -29,7 +29,7 @@
 
 .container {
     width: 100%;
-    will-change: contents;
+    // will-change: contents;
     height: 90%;
     min-height: 566px;
     position: absolute;
@@ -129,3 +129,43 @@
     }
 }
 
+@media (max-width: 960px){
+.page {
+    height: auto;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 58px;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+}
+
+.about-page .text-zone {
+    width: 80%;
+    min-height: 0;
+    }
+
+    
+    .text-zone {
+        position: static !important;
+        float: left;
+        margin-left: 10%;
+        transform: none !important;
+        margin-top: 170px;
+    }
+
+.top-tags {
+    bottom: auto;
+    top: 76px;
+
+}
+.tags {
+    margin-left: 70px;
+    left: 0;
+}
+}
