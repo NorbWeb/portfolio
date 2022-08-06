@@ -46,6 +46,7 @@ const Portfolio = () => {
   return (
     <>
       <div className="container portfolio-page">
+        <div className='text-zone'>
         <h1 className="page-title">
           <AnimatedLetters
             letterClass={letterClass}
@@ -53,7 +54,8 @@ const Portfolio = () => {
             idx={15}
           />
         </h1>
-        <div>{renderPortfolio(porfolioData.portfolio)}</div>
+        </div>
+        {renderPortfolio(porfolioData.portfolio)}
       </div>
       <Loader type="pacman" />
     </>

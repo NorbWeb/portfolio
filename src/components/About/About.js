@@ -24,7 +24,7 @@ const About = () => {
 
   return (
     <>
-      <div className="container about-page" style={{transform: "matrix(1,0,0,1,0,0)"}}>
+      <div className="container about-page" >
         <div className="text-zone">
           <h1>
             <AnimatedLetters
