@@ -1,7 +1,9 @@
 .logo-container {
-    z-index: 0;
-    width: 400px;
-    height: 609px;
+    z-index: -1;
+    // width: 400px;
+    // height: 609px;
+    width: clamp(150px, 30vw, 400px);
+    height: clamp(150px, 40vw, 600px);
     position: absolute;
     top: 0;
     right: 15%;
@@ -9,11 +11,11 @@
     left: auto;
     margin: auto;
     
-    &:hover {
-        animation: rubberBand 1s;
-        display: inline-block;
-        animation-fill-mode: both;
-    }
+    // &:hover {
+    //     animation: rubberBand 1s;
+    //     display: inline-block;
+    //     animation-fill-mode: both;
+    // }
     
 
 
@@ -26,7 +28,7 @@
         margin: auto;
         width: 120%;
         opacity: 0;
-        z-index: 1;
+        z-index: -1;
         transform: rotate(1deg);
         margin-top: 30px;
         animation: myLogo 4s 2s forwards ease;

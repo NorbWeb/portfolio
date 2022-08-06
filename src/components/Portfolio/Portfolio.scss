@@ -3,7 +3,7 @@
 .portfolio-page {
     padding-left: 100px;
     padding-right: 50px;
-    width: calc(100% - 150px);
+    width:100%;
     position: initial;
     height: 100%;
     overflow: auto;
@@ -16,9 +16,11 @@
 
     .images-container {
         display: flex;
+        flex-direction: row;
         gap: 15px;
         flex-wrap: wrap;
         padding-bottom: 100px;
+        width: 100%;
     }
 
     .image-box {
@@ -27,7 +29,7 @@
         height: 400px;
         overflow: hidden;
         border-radius: 10px;
-        max-width: calc(25% - 10px);
+        width: 100px;
 
         .portfolio-image {
             position: absolute;
@@ -115,4 +117,35 @@
             background: transparent;
         }
     }
+}
+
+@media (max-width: 960px){
+    .portfolio-page {
+        padding: 0;
+        margin: 0;
+        margin-left: 10%;
+        overflow-x: hidden;
+
+        .images-container {
+            margin-top: 30px;
+        }
+
+        h1.page-title {
+            margin: 0;
+            margin-top: 170px;
+        }
+        
+        .image-box {
+            margin-bottom: 20px;
+        }
+        
+    }
+}
+
+@media (max-width: 560px){
+    .portfolio-page {
+    h1.page-title {
+        margin: 0;
+        margin-top: 80px;
+    }}
 }
