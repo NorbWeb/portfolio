@@ -6,7 +6,7 @@
 .nav-bar {
     background: #272727;
     width: 60px;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0;
     z-index: 3;
@@ -158,6 +158,7 @@
         flex-direction: row;
         justify-content: space-between;
         min-height: 0;
+        position: fixed;
 
         .logo {
             margin-left: 10px;
@@ -241,7 +242,7 @@
         flex-direction: row;
         justify-content: space-between;
         min-height: 0;
-        position: sticky;
+        position: fixed;
 
         .logo {
             margin-left: 10px;

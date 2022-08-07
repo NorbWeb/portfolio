@@ -2,7 +2,7 @@
 
 .stage-cube-cont {
     width: 50%;
-    height: 100%;
+    height: calc(30% + 400px);
     top: 0;
     padding-top: 30%;
     margin-left: 0;
@@ -77,5 +77,8 @@
     .stage-cube-cont {
         position: relative;
         width: 100%;
-        padding-top: 18%;
+        height: 250px;
+        top: 565px;
+        padding-top: 0%;
+        overflow: visible;
     }}
