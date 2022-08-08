@@ -1,21 +1,19 @@
 .logo-container {
     z-index: -1;
-    // width: 400px;
-    // height: 609px;
     width: clamp(150px, 30vw, 400px);
     height: clamp(150px, 40vw, 600px);
     position: absolute;
-    top: 0;
-    right: 15%;
+    top: 30%;
     bottom: 0;
+    right: 15%;
     left: auto;
     margin: auto;
     
-    // &:hover {
-    //     animation: rubberBand 1s;
-    //     display: inline-block;
-    //     animation-fill-mode: both;
-    // }
+    &:hover {
+        animation: rubberBand 1s;
+        display: inline-block;
+        animation-fill-mode: both;
+    }
     
 
 
@@ -45,3 +43,32 @@
     }
 }
 
+
+@media (max-width:960px) {
+    .logo-container {
+        z-index: -1;
+        width: clamp(150px, 30vw, 400px);
+        height: clamp(150px, 40vw, 600px);
+        position: absolute;
+        top: 100%;
+        right: 15%;
+        bottom: 0;
+        left: auto;
+        margin: auto;
+    }
+}
+
+
+@media (max-width:560px) {
+    .logo-container {
+        z-index: -1;
+        width: clamp(150px, 30vw, 400px);
+        height: clamp(150px, 40vw, 600px);
+        position: absolute;
+        top: 60%;
+        right: 15%;
+        bottom: 0;
+        left: auto;
+        margin: auto;
+    }
+}

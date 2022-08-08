@@ -137,6 +137,12 @@
     margin-bottom: 10px;
 }
 
+.home-page .text-zone, h1 {
+    width: 90%;
+}
+
+
+
 .container {
     width: 100%;
     height: 100%;
@@ -145,6 +151,7 @@
     box-sizing: border-box;
     position: relative;
     top: 0;
+
 }
 
 .about-page .text-zone {
@@ -158,7 +165,7 @@
         float: left;
         margin-left: 10%;
         transform: none !important;
-        margin-top: 170px;
+        margin-top: 170px;        
     }
 
 .top-tags {
@@ -183,7 +190,9 @@
         position: absolute;
         margin-bottom: 10px;
     }
-
+    .home-page h1 {
+        font-size: 4rem;
+    }
     .text-zone {
         margin-top: 140px;
     }
