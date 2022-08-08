@@ -5,8 +5,9 @@
     h1 {
         margin-top: 0;
         position: relative;
-        left: 10%;
+        left: 100px;
         top: 100px;
+        width: 80%;
     }
     
 }
@@ -15,17 +16,9 @@
    
 
         h1.page-title {
-            margin: 0;
-            top: -9vh;
+           margin-top: 10%;
+           left: 20%;
         }
         
     
-}
-
-@media (max-width: 560px){
-    .portfolio-page {
-    h1.page-title {
-        margin: 0;
-        top: 0;
-    }}
 }
