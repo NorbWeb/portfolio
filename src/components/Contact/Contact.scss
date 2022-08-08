@@ -80,12 +80,13 @@
 }
 
 .info-map {
-    position: absolute;
-    background-color: #000;
-    top: 50px;
-    right: 30%;
+    position: relative;
+    background-color: #272727;
+    top: 85px;
+    left: 50%;
     z-index: 999999;
     width: 267px;
+    height: 154px;
     padding: 20px;
     color: #fff;
     font-family: 'Helvetica';
@@ -96,31 +97,103 @@
     animation-fill-mode: forwards;
 
     span {
-        font-size: 16px;
         display: block;
+    }
+    .span-email {
+        font-size: 16px;
         padding-top: 20px;
         color: $primary-color;
     }
 }
 
 .map-wrap {
-    background: rgba(8, 253, 216, 0.1);
-    float: right;
-    width: 53%;
-    height: 100%;
-
+    background: rgba(37, 71, 156, 0.1);
+    position: absolute;
+    margin-left: 50%;
+    height: 90vh;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
 }
 
 .leaflet-container {
-    width: 100%;
     height: 100%;
-    position: relative;
-    opacity: 0;
-    animation: backInRight 1s 1.2s;
-    animation-fill-mode: forwards;
+    width: 100%;
+    animation: zoomIn 1s 1.2s;
+    animation-fill-mode: both;
+
+
+    .leaflet-popup {
+        margin-bottom: 25px;
+    }
 
     .leaflet-popup-content-wrapper {
     font-size: 12px;
     width: 150px;
+    border: 1px solid black;
+    background-color: $hover-color;
+
     }
+
+    .leaflet-popup-tip {
+        border: 1px solid black;
+        background-color: $hover-color;
+
+        }
+}
+
+@media (max-width: 960px) {
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map-wrap {
+        margin-top: 10%;
+        height: 40vh;
+        position: relative;
+        margin: 0 10% 10% 10%;
+    }
+
+    .info-map {
+        position: absolute;
+        top: 81%;
+
+       span {
+        position: absolute;
+       }
+
+       .span-email {
+        margin-top: 65px;;
+    }
+    }
+}
+
+@media (max-width: 560px) {
+    .info-map {
+        position: relative;
+        left: 10%;
+        width: 80%;
+    }
+
+    .map-wrap {
+        height: 320px;
+        margin-bottom: 100px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 400px){
+    .info-map {
+        right: 10%;
+    }
+
+    .map-wrap {
+        height: 300px;
+        margin-bottom: 100px;
+    }
+
 }

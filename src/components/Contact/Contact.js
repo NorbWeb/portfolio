@@ -38,76 +38,85 @@ const Contact = () => {
 
   return (
     <>
-      <div className="container contact-page">
-        <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={'Contact me'.split('')}
-              inx={15}
-            />
-          </h1>
-          <p>
-            Do you have some questions about coding, my work or my self? Do you
-            want to work with me or have some interesting ideas? Then just
-            contact me! I am looking forward to hearing from you. And if you
-            have a job offer, don't hesitate and hit the keys!{' '}
-          </p>
-          <div className="contact-form">
-            <form ref={refForm} onSubmit={sendEmail}>
-              <ul>
-                <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
-                </li>
-                <li className="half">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </li>
-                <li>
-                  <input
-                    placeholder="Subject"
-                    type="text"
-                    name="subject"
-                    required
-                  />
-                </li>
-                <li>
-                  <textarea
-                    placeholder="Message"
-                    name="message"
-                    required
-                  ></textarea>
-                </li>
-                <li>
-                  <input type="submit" className="flat-button" value="SEND" />
-                </li>
-              </ul>
-            </form>
+      <div className="box contact-page">
+        <div className='wrapper'>
+          <div className="text-zone">
+            <h1>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={'Contact me'.split('')}
+                inx={15}
+              />
+            </h1>
+            <p>
+              Do you have some questions about coding, my work or my self? Do
+              you want to work with me or have some interesting ideas? Then just
+              contact me! I am looking forward to hearing from you. And if you
+              have a job offer, don't hesitate and hit the keys!{' '}
+            </p>
+            <div className="contact-form">
+              <form ref={refForm} onSubmit={sendEmail}>
+                <ul>
+                  <li className="half">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      required
+                    />
+                  </li>
+                  <li className="half">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </li>
+                  <li>
+                    <input
+                      placeholder="Subject"
+                      type="text"
+                      name="subject"
+                      required
+                    />
+                  </li>
+                  <li>
+                    <textarea
+                      placeholder="Message"
+                      name="message"
+                      required
+                    ></textarea>
+                  </li>
+                  <li>
+                    <input type="submit" className="flat-button" value="SEND" />
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+          <div className="info-map">
+            <span>
+              Norbert Madauß,
+              <br />
+              Germany,
+              <br />
+              Somewhere in Potsdam
+              <br />
+            </span>
+            <span className="span-email">norbert.madauss@gmail.com</span>
+          </div>
+          <div className="map-wrap">
+            <MapContainer center={[52.394919, 13.060529]} zoom={13}>
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[52.394919, 13.060529]}>
+                <Popup className="popup">This is NOT my position 😉</Popup>
+              </Marker>
+            </MapContainer>
           </div>
         </div>
-        <div className="info-map">
-          Norbert Madauß,
-          <br />
-          Germany,
-          <br />
-          Somewhere in Potsdam
-          <br />
-          <span>norbert.madauss@gmail.com</span>
-        </div>
-        <div className="map-wrap">
-          <MapContainer type="pacman" center={[52.394919, 13.060529]} zoom={13}>
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[52.394919, 13.060529]}>
-              <Popup className="popup">This is not my position...</Popup>
-            </Marker>
-          </MapContainer>
-        </div>
       </div>
-      <Loader />
+      <Loader type="pacman" />
     </>
   )
 }
