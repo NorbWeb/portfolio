@@ -76,16 +76,27 @@
 @media (max-width: 960px){
     .stage-cube-cont {
         position: relative;
-        height: 250px;
+        height: 400px;
         width: 60%;
-        padding-top: 15%;
-        padding-left: 25%;
-        padding-right: 5%;
+        padding-top: 10%;
+        // padding-left: 25%;
+        // padding-right: 5%;
         margin-left: 20%;
-        margin-bottom: 20%;
+        // margin-bottom: 20%;
     }}
 
     @media (max-width: 560px) {
+        .stage-cube-cont {
+            position: relative;
+            height: 250px;
+            width: 60%;
+            padding-top: 15%;
+            padding-left: 25%;
+            padding-right: 5%;
+            margin-left: 20%;
+            margin-bottom: 20%;
+        }
+
         .cubespinner {
             animation-name: spincube ;
             transform-origin: 60px 60px;
