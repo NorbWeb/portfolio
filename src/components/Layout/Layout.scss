@@ -56,7 +56,7 @@
     }
 
     h1 {
-        font-size: 53px;
+        font-size: clamp(5rem, 5vw, 5rem);
         font-family: 'Coolvetica';
         color: $primary-color;
         font-weight: 400;
@@ -127,6 +127,8 @@
             color: $hover-color;
         }
     }
+
+    
 }
 
 @media (max-width: 960px){

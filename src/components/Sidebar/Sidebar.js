@@ -22,7 +22,6 @@ const Sidebar = () => {
   const handleMenu = () => {
     setOpen(!open)
   }
-  console.log(open)
 
   return (
     <div className="nav-bar">
@@ -31,7 +30,12 @@ const Sidebar = () => {
         <img className="sub-logo" src={LogoName} alt="logo-subtitle" />
       </Link>
       <nav className={open ? 'show' : null}>
-        <NavLink exact="true" activeclassname="active" to="/">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/"
+          onClick={() => setOpen(false)}
+        >
           <FontAwesomeIcon icon={faHome} />
         </NavLink>
         <NavLink
@@ -39,6 +43,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="about-link"
           to="/about"
+          onClick={() => setOpen(false)}
         >
           <FontAwesomeIcon icon={faUser} />
         </NavLink>
@@ -47,6 +52,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="portfolio-link"
           to="/portfolio"
+          onClick={() => setOpen(false)}
         >
           <FontAwesomeIcon icon={faSuitcase} />
         </NavLink>
@@ -55,6 +61,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="contact-link"
           to="/contact"
+          onClick={() => setOpen(false)}
         >
           <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>

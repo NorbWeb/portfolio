@@ -42,3 +42,11 @@ textarea {
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+
+@media (max-width: 560px) {
+    .loader-active {
+      position: absolute;
+      margin-top: 50vh;
+      margin-left: 50%;
+    }
+}
