@@ -15,13 +15,22 @@ import {
   faLinkedin,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false)
   const handleMenu = () => {
     setOpen(!open)
   }
+
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+
+const handleNavLink = () => {
+  setOpen(false);
+  window.scrollTo({top:0, left:0, behavior: 'smooth'})
+};
 
   return (
     <div className="nav-bar">
@@ -34,7 +43,7 @@ const Sidebar = () => {
           exact="true"
           activeclassname="active"
           to="/"
-          onClick={() => setOpen(false)}
+          onClick={() => handleNavLink()}
         >
           <FontAwesomeIcon icon={faHome} />
         </NavLink>
@@ -43,7 +52,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="about-link"
           to="/about"
-          onClick={() => setOpen(false)}
+          onClick={() => handleNavLink()}
         >
           <FontAwesomeIcon icon={faUser} />
         </NavLink>
@@ -52,7 +61,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="portfolio-link"
           to="/portfolio"
-          onClick={() => setOpen(false)}
+          onClick={() => handleNavLink()}
         >
           <FontAwesomeIcon icon={faSuitcase} />
         </NavLink>
@@ -61,7 +70,7 @@ const Sidebar = () => {
           activeclassname="active"
           className="contact-link"
           to="/contact"
-          onClick={() => setOpen(false)}
+          onClick={() => handleNavLink()}
         >
           <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
