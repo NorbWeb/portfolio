@@ -41,6 +41,16 @@
             opacity: 1;
         }
     }
+
+    @keyframes myLogoMobile {
+        from {
+            width: 10%;
+            transform: translateX(-100%) rotate(60deg);
+        }
+        to {
+            opacity: 0.4;
+        }
+    }
 }
 
 
@@ -61,15 +71,32 @@
 
 @media (max-width:560px) {
     .logo-container {
-        // display: none;
-        z-index: -1;
-        width: clamp(150px, 30vw, 400px);
-        height: clamp(150px, 40vw, 600px);
-        position: absolute;
-        top: 40%;
-        right: 15%;
-        bottom: 0;
-        left: auto;
-        margin: auto;
+        position: fixed;
+        margin: 0%;
+        top: 30vh;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        height: auto;
+
+
+        &:hover {
+        animation: none;
+        }
+
+        .solid-logo {
+            position: relative;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            margin: auto;
+            width: 100%;
+            opacity: 0;
+            z-index: -1;
+            transform: rotate(10deg) skewY(-10deg);
+            margin-top: 0px;
+            animation: myLogoMobile 4s 2s forwards ease;
+        }
     }
 }
