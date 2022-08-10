@@ -1,34 +1,17 @@
 .logo-container {
     z-index: -1;
-    width: clamp(150px, 30vw, 400px);
-    height: clamp(150px, 40vw, 600px);
-    position: absolute;
-    top: 30%;
-    bottom: 0;
-    right: 15%;
-    left: auto;
-    margin: auto;
-    
-    &:hover {
-        animation: rubberBand 1s;
-        display: inline-block;
-        animation-fill-mode: both;
-    }
-    
-
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 20%;
+    left: 50%;
 
     .solid-logo {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: 0;
-        margin: auto;
-        width: 120%;
+        width: 80%;
+        height: auto;
         opacity: 0;
         z-index: -1;
-        transform: rotate(1deg);
-        margin-top: 30px;
+        transform: rotate(10deg) skewY(-10deg);
         animation: myLogo 4s 2s forwards ease;
     }
 
@@ -56,46 +39,10 @@
 
 @media (max-width:960px) {
     .logo-container {
-        z-index: -1;
-        width: clamp(150px, 30vw, 400px);
-        height: clamp(150px, 40vw, 600px);
-        position: absolute;
-        top: 100%;
-        right: 15%;
-        bottom: 0;
-        left: auto;
-        margin: auto;
-    }
-}
-
-
-@media (max-width:560px) {
-    .logo-container {
-        position: fixed;
-        margin: 0%;
-        top: 30vh;
-        left: 10%;
-        right: 10%;
-        width: 80%;
-        height: auto;
-
-
-        &:hover {
-        animation: none;
-        }
+        left: 15%;
+        top: 50%;
 
         .solid-logo {
-            position: relative;
-            top: 0%;
-            right: 0%;
-            bottom: 0%;
-            left: 0%;
-            margin: auto;
-            width: 100%;
-            opacity: 0;
-            z-index: -1;
-            transform: rotate(10deg) skewY(-10deg);
-            margin-top: 0px;
             animation: myLogoMobile 4s 2s forwards ease;
         }
     }

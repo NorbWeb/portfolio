@@ -47,7 +47,7 @@ const About = () => {
           <p>
             My job portfolio looking like a colourful mix. After school I went
             to military service for a couple of years. Then I started to study
-            social studys at the university of Rostock. But I heard a call for
+            social sience at the university of Rostock. But I heard a call for
             manual work, so I decide to become a destiller. Yup, I can destille
             booze 🥃.
           </p>
