@@ -19,14 +19,16 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className="portfolio-page">
-          <h1 className="page-title">
+      <div className="box portfolio-page">
+        <div className='text-zone'>
+          <h1>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={'Portfolio'.split('')}
               idx={15}
             />
           </h1>
+          </div>
         <RenderPortfolio />
       </div>
       <Loader type="pacman" />

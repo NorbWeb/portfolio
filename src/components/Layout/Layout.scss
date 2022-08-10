@@ -30,7 +30,7 @@
 .box {
     width: 100%;
     // will-change: contents;
-    min-height: 566px;
+    min-height: 90%;
     position: absolute;
     opacity: 0;
     top: 5%;
@@ -46,7 +46,7 @@
     .text-zone {
         position: absolute;
         left: 10%;
-        top: 50%;
+        top: 400px;
         transform: translateY(-50%);
         width: 35%;
         vertical-align: middle;
@@ -120,17 +120,21 @@
         }
     }
 
-
+  
+    
     
     .text-animate-hover {
         &:hover {
             color: $hover-color;
         }
     }
+
 }
 
-.contact-page .text-zone {
-    top: 65%;
+.portfolio-page {
+    .text-zone {
+        top: 200px;
+    }
 }
 
 @media (max-width: 960px){
@@ -145,7 +149,10 @@
     width: 90%;
 }
 
-
+.portfolio-page {
+    display: flex;
+    flex-direction: column;
+}
 
 .box {
     width: 100%;
@@ -157,10 +164,11 @@
 
 }
 
-.about-page .text-zone, .contact-page .text-zone {
+.about-page, .contact-page, .portfolio-page {
+   .text-zone {
     width: 80%;
     min-height: 0;
-    margin-bottom: 0;
+    margin-bottom: 0;}
     }
 
     

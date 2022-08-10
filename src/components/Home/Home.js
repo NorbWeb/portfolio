@@ -3,7 +3,7 @@ import LogoTitle from '../../assets/images/letter-n3.png'
 import AnimatedLetter from '../AnimatedLetters/AnimatedLetters'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import Logo from './Logo/Logo'
+import LogoN from '../../assets/images/letter-n3.png'
 import Loader from 'react-loaders'
 
 const Home = () => {
@@ -44,7 +44,7 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-        <Logo />
+        <img  className="solid-logo" src={LogoN} alt="N" />
       </div>
       <Loader type="pacman" />
     </>
