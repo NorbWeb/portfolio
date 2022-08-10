@@ -4,19 +4,22 @@
             "cover": "/portfolio/Project 1/fugger.png",
             "title": "Fugger",
             "description": "React, JSX, MUI, MySql",
-            "url": "https://wcs-fugger.herokuapp.com/"
+            "url": "https://wcs-fugger.herokuapp.com/",
+            "info":"A helpfull tool to align your company income and budget planing. Provides a upload function for excel shett from your tax advisor."
         },
         {
             "cover": "/portfolio/Project 2/webTable.png",
             "title": "Web-Table",
             "description": "React, MUI",
-            "url": "https://web-table.netlify.app/"
+            "url": "https://web-table.netlify.app/",
+            "info":"My personal project due to my passion for pen & paper. It should provides an easy and clean way to play with your friends all over the world, regardless of the choosen rule set."
         },
         {
             "cover": "/portfolio/Project 3/customGin.png",
             "title": "Custom Gin",
             "description": "React, JSX ",
-            "url": "https://customgin.netlify.app/"
+            "url": "https://customgin.netlify.app/",
+            "info":"My first team project in Wild Code School bootcamp. Its a little game to show what kind of Gin you are."
         }
     ]
 }

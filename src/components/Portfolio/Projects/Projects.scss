@@ -16,6 +16,11 @@
         object-fit: cover;
     }
 
+    .info {
+        margin-top: 10px;
+        height: 100px;
+    }
+
     .content {
         position: absolute;
         width: 100%;
@@ -27,8 +32,10 @@
             rgba(0,0,0,0.2) 0,
             rgba(0,0,0,1)
         );
-        bottom: -70px;
+        bottom: -200px;
     }
+
+    
 
     .title {
         margin-bottom: 0;
@@ -68,6 +75,8 @@
         transform: translateY(-3px);
         background: $primary-color;
         color: #585858;
+
+        
     }
 
     &:after {
@@ -83,6 +92,8 @@
         z-index: 2;
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         opacity: 0;
+
+       
     }
 
     &:hover:after {
