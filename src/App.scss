@@ -1,52 +1,6 @@
-// $primary-color:#ffd700;
 $primary-color:#E6BC57;
 $hover-color:#94E48C;
 $form-color:#DB659B;
-$bg-one:rgb(37, 71, 156);
+$bg-one:#25479c;
 $bg-two:#E66F45;
-
-
-@import 'animate.css';
-@import '../node_modules/loaders.css/src/animations/pacman.scss';
-
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Coolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
-}
-
-input,
-textarea {
-  font-family: 'Helvetica Neue';
-}
-
-.loader-active {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  width: 50px;
-  height: 50px;
-  animation: fadeOut 1s 1s;
-  animation-fill-mode: forwards;
-}
-
-@media (max-width: 560px) {
-    .loader-active {
-      position: absolute;
-      margin-top: 50vh;
-      margin-left: 50%;
-    }
-}
+$dark:#272727;

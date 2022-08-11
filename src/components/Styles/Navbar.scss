@@ -1,0 +1,180 @@
+@import "../../App.scss";
+$logo-height: 10%;
+
+.box-navbar {
+    background-color: $dark;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: space-between;
+
+    .box-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        height: 70px;
+        width: 100%;
+        margin-top: 10px;
+
+        img{
+            object-fit: contain;
+
+            &:first-child {
+            height: 60%;
+            }
+            &:nth-child(2) {
+                height: 18%;
+            }
+        }
+    }
+
+    nav {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        a {
+            font-size: 25px;
+            color: $primary-color;
+
+            i {
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover {
+                color: $hover-color;
+
+                svg {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: '';
+                font-size: 9px;
+                letter-spacing: 2px;
+                position: relative;
+                display: inline-block;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child {
+                &:after {
+                    content: 'HOME';
+                }
+            }
+
+        }
+    }
+
+    ul {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100px;
+        width: 100%;
+        
+        a {
+            color: $primary-color;
+        }
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 576px) {
+    $logo-height: 80%;
+
+    .box-navbar {
+        background-color: $dark;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+
+        .box-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $logo-height * 0.15;
+            height: 100%;
+            width: 20%;
+
+            img{
+                object-fit: contain;
+
+                &:first-child {
+                height: calc($logo-height - ($logo-height*0.4));
+                }
+                &:nth-child(2) {
+                    height: calc($logo-height * 0.2);
+                }
+            }
+        }
+
+        nav {
+            left: 100%;
+            opacity: 0;
+        }
+
+        nav.show {
+            opacity: 1;
+            left: 0%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            top: 60px;
+            height: 60px;
+            width: 100%;
+            background-color: $dark;
+            transition: all 0.3s ease-out;
+            
+            a {
+                font-size: 25px;
+                color: $primary-color;
+            }
+        }
+
+        .mobile-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            color: $primary-color;
+            font-size: 35px;
+
+            &:active {
+                color: $hover-color;
+            }
+        }
+
+        ul {
+            display: none;
+        }
+    }
+}
