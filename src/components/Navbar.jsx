@@ -19,6 +19,7 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
+  const [isHovering, setIsHovering] = useState(false)
   const handleMenu = () => {
     setOpen(!open)
   }
@@ -31,30 +32,35 @@ const Navbar = () => {
     setOpen(false)
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }
+
+  const handleMouseOver = (item) => {
+    setIsHovering(item)
+  }
+
+  const handleMouseOut = () => {
+    setIsHovering(null)
+  }
+
   const menuItems = [
     {
       name: 'Home',
       path: '/',
       icon: faHome,
-      className: 'home-link',
     },
     {
       name: 'About',
       path: '/about',
       icon: faUser,
-      className: 'about-link',
     },
     {
       name: 'My Work',
       path: '/portfolio',
       icon: faSuitcase,
-      className: 'portfolio-link',
     },
     {
       name: 'Contact',
       path: '/contact',
       icon: faEnvelope,
-      className: 'contact-link',
     },
   ]
 
@@ -89,11 +95,21 @@ const Navbar = () => {
               key={item.name}
               exact="true"
               activeclassname="active"
-              className={item.className}
               to={item.path}
               onClick={() => handleNavLink()}
+              onMouseOver={() => handleMouseOver(item.name)}
+              onMouseOut={handleMouseOut}
             >
-              <FontAwesomeIcon icon={item.icon} />
+              <FontAwesomeIcon
+                icon={item.icon}
+                style={isHovering === item.name ? { display: 'none' } : null}
+              />
+              <div
+                className="name"
+                style={isHovering === item.name ? null : { display: 'none' }}
+              >
+                {item.name}
+              </div>
             </NavLink>
           )
         })}
