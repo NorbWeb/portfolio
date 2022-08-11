@@ -49,7 +49,7 @@ const Contact = () => {
               />
             </h1>
             <p>
-              Do you have some questions about coding, my work or my self? Do
+              Do you have some questions about coding, my work or myself? Do
               you want to work with me or have some interesting ideas? Then just
               contact me! I am looking forward to hearing from you. And if you
               have a job offer, don't hesitate and hit the keys!{' '}

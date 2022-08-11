@@ -5,14 +5,14 @@
             "title": "Fugger",
             "description": "React, JSX, MUI, MySql",
             "url": "https://wcs-fugger.herokuapp.com/",
-            "info":"A helpfull tool to align your company income and budget planing. Provides a upload function for excel shett from your tax advisor."
+            "info":"A helpfull tool to align your company income and budget planing. Provides a upload function for excel files from your tax advisor."
         },
         {
             "cover": "/portfolio/Project 2/webTable.png",
             "title": "Web-Table",
             "description": "React, MUI",
             "url": "https://web-table.netlify.app/",
-            "info":"My personal project due to my passion for pen & paper. It should provides an easy and clean way to play with your friends all over the world, regardless of the choosen rule set."
+            "info":"My personal project due to my passion for pen & paper. It should provides an simple way to play with your friends all over the world, regardless of the choosen rule set."
         },
         {
             "cover": "/portfolio/Project 3/customGin.png",
