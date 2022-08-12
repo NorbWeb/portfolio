@@ -111,6 +111,7 @@ $logo-height: 10%;
         height: 60px;
         width: 100%;
         flex-direction: row;
+        position: sticky;
 
         .box-logo {
             gap: $logo-height * 0.15;

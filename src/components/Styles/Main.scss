@@ -1,0 +1,30 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+.box-main {
+    width: 100%;
+    height: 100%;
+
+    .page {
+        padding-left: 80px;
+        padding-top: 10px;
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ middle ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 992px) {
+    .box-main {
+        .page {
+            padding-left: 2%;
+        }
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ small ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 576px) {
+    .box-main {
+        .page {
+        }
+    }
+}
