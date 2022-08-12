@@ -1,29 +1,53 @@
+@import '../../App.scss';
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 .box-home {
-    .text-zone {
-        h1 {
-            span {
-                font-size: 3rem;
-            }
+    .letter-box {
+        display: inline-block;
+        width: clamp(1.5rem, 8vw, 3rem);
+        margin-left: 20px;
+        margin-right: 2px;
 
-            .letter-box {
-                display: inline-block;
+        &:hover {
+            animation: rubberBand 1s;
+        }
 
-                &:hover {
-                    animation: rubberBand 1s;
-                }
+        img {
+            position: relative;
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            animation: rotateIn 1s linear both;
+            animation-fill-mode: both;
+            bottom: 9px;
 
-                img {
-                    position: relative;
-                    width: clamp(2.8rem, 3vw, 4.2rem);
-                    margin-left: 20px;
-                    opacity: 0;
-                    height: auto;
-                    animation: rotateIn 1s linear both;
-                    animation-fill-mode: both;
-                }
-            }
+        }
+    }
+
+    h2 {
+        color: $primary-color;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        opacity: 0;
+        animation: fadeInUp 1.5s 2s forwards;
+    }
+
+    .box-btn{
+        button {
+            opacity: 0;
+            animation: fadeInUp 1.5s 2s forwards;
+            background-color: $primary-color;
+            height: 40px;
+            width: 175px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            letter-spacing: 3px;
+            font-weight: 500;
+            // font-family: monospace; TO DO ######
         }
     }
 }
@@ -31,34 +55,23 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ middle ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 @media screen and (max-width: 992px) {
-    
+    .box-home {
+        img {
+            bottom: clamp(0.25rem, 1vh, 0.45rem);
+        }
+            
+        h2 {
+            width: 100%;
+        }
+    }    
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ small ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 @media screen and (max-width: 576px) {
     .box-home {
-        .text-zone {
-            margin-top: 70px;
-            margin-left: 5%;
-            margin-right: 5%;
-
-            h1 {
-
-                .letter-box {
-    
-                    img {
-                        position: relative;
-                        top: -3px;
-                        width: clamp(2.8rem, 3vw, 4.2rem);
-                        margin-left: 20px;
-                        opacity: 0;
-                        height: auto;
-                        animation: rotateIn 1s linear both;
-                        animation-fill-mode: both;
-                    }
-                }
-            }
+        .box-btn {
+            width: 100%;
         }
     }    
 }

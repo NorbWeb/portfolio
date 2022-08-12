@@ -3,10 +3,23 @@
 .box-main {
     width: 100%;
     height: 100%;
+    font-family: 'Didact Gothic', sans-serif;
 
     .page {
-        padding-left: 80px;
-        padding-top: 10px;
+        margin-left: 80px;
+
+        h1 {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 500;
+            font-size: clamp(2rem, 10vw, 4rem);
+        }
+
+        .text-zone {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 150px 0 0 50px;
+        }
     }
 }
 
@@ -15,7 +28,11 @@
 @media screen and (max-width: 992px) {
     .box-main {
         .page {
-            padding-left: 2%;
+            margin: 50px 5% 0px 5%;
+
+            .text-zone {
+                padding: 0px;
+            }
         }
     }
 }
@@ -25,6 +42,15 @@
 @media screen and (max-width: 576px) {
     .box-main {
         .page {
+            .text-zone {
+                margin-top: 70px;
+                align-items: center;
+                gap: 1rem;
+
+                h1 {
+                    width: 100%;
+                }
+            }
         }
     }
 }

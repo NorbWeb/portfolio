@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import LogoTitle from '../assets/images/letter-n3.png'
 import AnimatedLetters from './AnimatedLetters'
 import './Styles/Home.scss'
@@ -37,6 +38,11 @@ const Home = () => {
           />
         </h1>
         <h2>Junior Fullstack Developer</h2>
+        <div className='box-btn'>
+          <button>
+            <Link to="/contact">CONTACT ME</Link>
+          </button>
+        </div>
       </div>
     </div>
   )
