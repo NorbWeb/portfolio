@@ -88,6 +88,7 @@ const Navbar = () => {
         <img src={Logo} alt="Logo" />
         <img src={SubLogo} alt="SubLogo" />
       </div>
+
       <nav className={open ? 'show' : null}>
         {menuItems.map((item) => {
           return (
@@ -101,11 +102,12 @@ const Navbar = () => {
               onMouseOut={handleMouseOut}
             >
               <FontAwesomeIcon
+                className="icon"
                 icon={item.icon}
                 style={isHovering === item.name ? { display: 'none' } : null}
               />
               <div
-                className="name"
+                className="item-name"
                 style={isHovering === item.name ? null : { display: 'none' }}
               >
                 {item.name}
