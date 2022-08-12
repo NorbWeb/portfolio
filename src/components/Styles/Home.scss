@@ -1,0 +1,64 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+.box-home {
+    .text-zone {
+        h1 {
+            span {
+                font-size: 3rem;
+            }
+
+            .letter-box {
+                display: inline-block;
+
+                &:hover {
+                    animation: rubberBand 1s;
+                }
+
+                img {
+                    position: relative;
+                    width: clamp(2.8rem, 3vw, 4.2rem);
+                    margin-left: 20px;
+                    opacity: 0;
+                    height: auto;
+                    animation: rotateIn 1s linear both;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ middle ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 992px) {
+    
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ small ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 576px) {
+    .box-home {
+        .text-zone {
+            margin-top: 70px;
+            margin-left: 5%;
+            margin-right: 5%;
+
+            h1 {
+
+                .letter-box {
+    
+                    img {
+                        position: relative;
+                        top: -3px;
+                        width: clamp(2.8rem, 3vw, 4.2rem);
+                        margin-left: 20px;
+                        opacity: 0;
+                        height: auto;
+                        animation: rotateIn 1s linear both;
+                        animation-fill-mode: both;
+                    }
+                }
+            }
+        }
+    }    
+}
