@@ -1,3 +1,6 @@
+@import 'animate.css';
+
+// Theme colors
 $primary-color:#E6BC57;
 $secondary-color:#FAA55C;
 $hover-color:#82E6FA;
@@ -7,4 +10,26 @@ $bg-two:#FAA55C;
 $dark:#272727;
 $grey:#ccc;
 
-@import 'animate.css';
+// Component styles
+@mixin button() {
+    white-space: nowrap;
+    color: $primary-color;
+    letter-spacing: 3px;
+    font-weight: 500;
+    border: 5px outset $primary-color;
+    border-radius: 20px;
+    padding: 10px 18px;
+    transition: all 0.15s ease-in-out ;
+    box-shadow: 1px 2px 2px $dark;
+
+        &:hover {
+            color: $dark;
+            background-color: $primary-color;
+        }
+
+    @media (pointer: coarse) {
+        color: $dark;
+        background-color: $primary-color;
+    }
+
+}
