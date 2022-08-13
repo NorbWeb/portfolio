@@ -8,7 +8,7 @@
     font-family: 'Didact Gothic', sans-serif;
 
     .page {
-        margin: 0px 50px 0px 80px;
+        padding: 0px 50px 0px 80px;
 
         .grid-container {
             display: grid;
@@ -28,6 +28,7 @@
             flex-direction: column;
             gap: 2rem;
             margin: 150px 0px 0px 50px;
+            width: 45vw;
         }
     }
 }
@@ -37,7 +38,7 @@
 @media screen and (max-width: 992px) {
     .box-main {
         .page {
-            margin: 110px 5% 0px 5%;
+            padding: 110px 5% 0px 5%;
 
             .grid-container {
                 grid: 'first second';
@@ -55,15 +56,16 @@
 @media screen and (max-width: 576px) {
     .box-main {
         .page {
-            margin-top: 130px;
+            padding-top: 130px;
 
             .grid-container {
-                grid: 'first' 'second';
+                grid: 'first' 'second' 'second';
             }
 
             .text-zone {
                 align-items: center;
                 gap: 1rem;
+                width: 100%;
 
                 h1 {
                     width: 100%;

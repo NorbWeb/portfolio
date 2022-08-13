@@ -1,0 +1,27 @@
+@import '../../App.scss';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+.box-about {
+    .text-zone {
+        // max-width: 800px;
+        p {
+            // width: 50%;
+        }
+    }
+
+    .box-effect {
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ middle ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 992px) {
+
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ small ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 576px) {
+
+}
