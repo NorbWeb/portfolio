@@ -12,14 +12,19 @@ const About = () => {
 
   return (
     <div className="box-about">
-      <div className="text-zone">
-        <h1>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={'About'.split('')}
-            idx={1}
-          />
-        </h1>
+      <div className="grid-container">
+        <div className="text-zone">
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={'About'.split('')}
+              idx={1}
+            />
+          </h1>
+        </div>
+        <div className="box-effect">
+          <h3>Placeholder</h3>
+        </div>
       </div>
     </div>
   )

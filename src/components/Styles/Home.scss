@@ -3,10 +3,12 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 .box-home {
+
     .letter-box {
+        grid-area: first;
         display: inline-block;
-        width: clamp(1.5rem, 8vw, 3rem);
-        margin-left: 20px;
+        width: clamp(1.5rem, 6vw, 3rem);
+        margin-left: 1rem;
         margin-right: 2px;
 
         &:hover {
@@ -27,41 +29,73 @@
     }
 
     h2 {
-        color: $primary-color;
+        color: $secondary-color;
         font-size: clamp(1rem, 4vw, 1.5rem);
         opacity: 0;
         animation: fadeInUp 1.5s 2s forwards;
     }
 
     .box-btn{
+
         button {
             opacity: 0;
             animation: fadeInUp 1.5s 2s forwards;
-            background-color: $primary-color;
+            background-color: transparent;
             height: 40px;
-            width: 175px;
+            width: 160px;
+            border: 1px solid $primary-color;
+            padding: 0px;
+            border-radius: 50px;
+
+            &:hover {
+                background-color: $primary-color;
+            }
         }
 
         a {
             text-decoration: none;
-            color: black;
+            color: $primary-color;
             letter-spacing: 3px;
             font-weight: 500;
-            // font-family: monospace; TO DO ######
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                color: $dark;
+            }
         }
+    }
+
+    .box-effect {
+        grid-area: second;
+        margin: 150px 0px 1rem 0px;
+        min-width: 200px;
+        height: 375px;
+        background-color: #fff;
     }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ middle ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 @media screen and (max-width: 992px) {
-    .box-home {
-        img {
-            bottom: clamp(0.25rem, 1vh, 0.45rem);
-        }
-            
+    .box-home {   
+
         h2 {
             width: 100%;
+        }
+
+        .box-btn {
+
+            button {
+                background-color: $primary-color;
+            }
+
+            a {
+                color: $dark;
+            }
         }
     }    
 }
@@ -70,7 +104,20 @@
 
 @media screen and (max-width: 576px) {
     .box-home {
+
+        .letter-box {
+
+            img {
+                bottom: clamp(4px, 1.5vw, 9px);
+            }
+        }
+       
         .box-btn {
+            width: 100%;
+        }
+
+        .box-effect {
+            margin-top: 0px;
             width: 100%;
         }
     }    

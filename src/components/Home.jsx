@@ -15,33 +15,38 @@ const Home = () => {
 
   return (
     <div className="box-home">
-      <div className="text-zone">
-        <h1>
-          <span className={`${letterClass} _1`}>H</span>
-          <span className={`${letterClass} _2`}>i,</span>
-          <br />
-          <span className={`${letterClass} _3`}>I</span>
-          <span className={`${letterClass} _4`}>'m</span>
-          <div className="letter-box">
-            <img src={LogoTitle} alt="developer" />
+      <div className="grid-container">
+        <div className="text-zone">
+          <h1>
+            <span className={`${letterClass} _1`}>H</span>
+            <span className={`${letterClass} _2`}>i,</span>
+            <br />
+            <span className={`${letterClass} _3`}>I</span>
+            <span className={`${letterClass} _4`}>'m</span>
+            <div className="letter-box">
+              <img src={LogoTitle} alt="developer" />
+            </div>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={'orbert'.split('')}
+              idx={5}
+            />
+            <br />
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={'web developer.'.split('')}
+              idx={11}
+            />
+          </h1>
+          <h2>Junior Fullstack Developer</h2>
+          <div className="box-btn">
+            <button>
+              <Link to="/contact">CONTACT ME</Link>
+            </button>
           </div>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={'orbert'.split('')}
-            idx={5}
-          />
-          <br />
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={'web developer.'.split('')}
-            idx={11}
-          />
-        </h1>
-        <h2>Junior Fullstack Developer</h2>
-        <div className='box-btn'>
-          <button>
-            <Link to="/contact">CONTACT ME</Link>
-          </button>
+        </div>
+        <div className="box-effect">
+          <h3>Placeholder</h3>
         </div>
       </div>
     </div>
