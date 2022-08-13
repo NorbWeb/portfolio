@@ -40,9 +40,7 @@ const Home = () => {
           </h1>
           <h2>Junior Fullstack Developer</h2>
           <div className="box-btn">
-            <button>
-              <Link to="/contact">CONTACT ME</Link>
-            </button>
+              <Link className='contact-btn' to="/contact">CONTACT ME</Link>
           </div>
         </div>
         <div className="box-effect">

@@ -12,7 +12,7 @@
 
         .grid-container {
             display: grid;
-            grid: 'first second';
+            grid: 'first second second';
             gap: 1rem;
         }
 
@@ -37,7 +37,11 @@
 @media screen and (max-width: 992px) {
     .box-main {
         .page {
-            margin: 50px 5% 0px 5%;
+            margin: 110px 5% 0px 5%;
+
+            .grid-container {
+                grid: 'first second';
+            }
 
             .text-zone {
                 margin: 0px;
@@ -51,7 +55,7 @@
 @media screen and (max-width: 576px) {
     .box-main {
         .page {
-            margin-top: 70px;
+            margin-top: 130px;
 
             .grid-container {
                 grid: 'first' 'second';
@@ -64,6 +68,11 @@
                 h1 {
                     width: 100%;
                 }
+            }
+
+            .contact-btn {
+                background-color: $primary-color;
+                color: $dark;
             }
         }
     }
