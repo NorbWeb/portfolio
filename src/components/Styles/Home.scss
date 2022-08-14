@@ -49,104 +49,59 @@
 
     .box-effect {
         grid-area: second;
-        margin: 150px 0px 1rem 0px;
+        padding: 150px 0px 1rem 0px;
         width: 100%;
-        height: 90vw;
-        position: relative;
-        // background-image: url("../../assets/images/letter-n3.png");
-        // background-size: 100% 100%;
-        // z-index: 1;
-
-        .box-img{
-                width: inherit;
-                height: inherit;
-                position: absolute;
-                z-index: -1;
-                display: none;
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
         
         .grid-box{
-            width: 100%;
-            height: 90vw;
+            width: 35vw;
+            height: 35vw;
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: repeat(6, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
             border-radius: 30px;
 
-
+            $tile: calc(35vw / 6);
 
             @for $i from 1 through 36 {
-                width: calc(100% / 6);
-                height: calc(90vw / 6);
+
+                .tile {
+                    width: $tile;
+                    height: $tile;
+                    opacity: 1;
+                }
                 
                 img {
                     object-fit: none;
-                    width: calc(90vw / 6);
-                    height: calc(90vw / 6);
+                    width: calc($tile);
+                    height: calc($tile);
                 }
-
-                .img-1 {
-                    object-position: 0% 0%;
+            
+            @for $j from 1 through 6 {
+                .img-#{$j} {
+                    object-position: calc((#{$j} - 1) * 20%) 0%;
                 }
-                .img-2 {
-                    object-position: 20% 0%;
+                $j1: calc($j + 6);
+                .img-#{$j1} {
+                    object-position: calc((#{$j} - 1) * 20%) 20%;
                 }
-                .img-3 {
-                    object-position: 40% 0%;
+                $j2: calc($j + 12);
+                .img-#{$j2} {
+                    object-position: calc((#{$j} - 1) * 20%) 40%;
                 }
-                .img-4 {
-                    object-position: 60% 0%;
+                $j3: calc($j + 18);
+                .img-#{$j3} {
+                    object-position: calc((#{$j} - 1) * 20%) 60%;
                 }
-                .img-5 {
-                    object-position: 80% 0%;
+                $j4: calc($j + 24);
+                .img-#{$j4} {
+                    object-position: calc((#{$j} - 1) * 20%) 80%;
                 }
-                .img-6 {
-                    object-position: 100% 0%;
+                $j5: calc($j + 30);
+                .img-#{$j5} {
+                    object-position: calc((#{$j} - 1) * 20%) 100%;
                 }
-                .img-7 {
-                    object-position: 0% 20%;
-                }
-                .img-8 {
-                    object-position: 20% 20%;
-                }
-                .img-9 {
-                    object-position: 40% 20%;
-                }
-                .img-10 {
-                    object-position: 60% 20%;
-                }
-                .img-11 {
-                    object-position: 80% 20%;
-                }
-                .img-12 {
-                    object-position: 100% 20%;
-                }
-                .img-13 {
-                    object-position: 0% 40%;
-                }
-                .img-14 {
-                    object-position: 20% 40%;
-                }
-                .img-15 {
-                    object-position: 40% 40%;
-                }
-                .img-16 {
-                    object-position: 60% 40%;
-                }
-                .img-17 {
-                    object-position: 80% 40%;
-                }
-                .img-18 {
-                    object-position: 100% 40%;
-                }
-                    
-
+            }    
+                
                 .tile-1 {
                     border-radius: 30px 0px 0px 0px;
                 }
@@ -161,10 +116,7 @@
                 }
 
                 .tile-#{$i} {
-                    background: linear-gradient(calc(random(360) * 1deg), $bg-one, $bg-two);
-                    opacity: 1;
-                    animation: flipInY calc(random(5) * 0.5s) forwards;
-                    
+                    animation: flipInY calc(random(5) * 0.5s) forwards;                 
                 }
     
             }
@@ -180,6 +132,33 @@
         h2 {
             width: 100%;
         }
+
+        .box-effect {
+            padding: 150px 0px 1rem 0px;
+            width: 100%;
+            height: 50vh;
+            
+            .grid-box{
+                width: 100%;
+                height: 50vh;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                border-radius: 30px;
+
+                $tile: 50px;
+
+                .tile {
+                    height: $tile;
+                    width: $tile;
+                    img {
+                        object-fit: none;
+                        width: $tile;
+                        height: $tile;
+                    }
+                }
+            }    
+        }    
     }    
 }
 
@@ -197,11 +176,11 @@
        
         .box-btn {
             width: 100%;
-            margin: 10px 0px 20px 0px;
+            padding: 10px 0px 20px 0px;
         }
 
         .box-effect {
-            margin-top: 0px;
+            padding-top: 0px;
         }
     }    
 }

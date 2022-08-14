@@ -51,12 +51,9 @@ const Home = () => {
           </div>
         </div>
         <div className="box-effect">
-          <div className='box-img'>
-            <img src={LogoTitle} alt="Logo" />
-          </div>
           <div className="grid-box">
             {arr.map((tile, index) => {
-              return <div key={tile + index} className={`tile-${tile}`}>
+              return <div key={tile + index} className={`tile tile-${tile}`}>
                 <img className={`img-${tile}`} src={LogoTitle} alt={`Tile ${tile}`} />
               </div>
             })}

@@ -44,8 +44,14 @@
                 grid: 'first second';
             }
 
+            h1 {
+                font-size: clamp(2rem, 7vw, 4rem);
+            }
+
             .text-zone {
                 margin: 0px;
+                width: 100%;
+                min-width: 50vw;
             }
         }
     }
