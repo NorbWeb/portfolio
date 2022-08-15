@@ -20,7 +20,7 @@ const Portfolio = () => {
   return (
     <>
       <div className="box portfolio-page">
-        <div className='text-zone'>
+        <div className="text-zone">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
@@ -28,7 +28,7 @@ const Portfolio = () => {
               idx={15}
             />
           </h1>
-          </div>
+        </div>
         <RenderPortfolio />
       </div>
       <Loader type="pacman" />

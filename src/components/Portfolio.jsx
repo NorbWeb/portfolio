@@ -23,6 +23,7 @@ const Portfolio = () => {
               idx={1}
             />
           </h1>
+          <p>Have a look at my recent work. I will show more after a while and some of them evolve after time. </p>
           <div className="images-container">
           {porfolioData.portfolio.map((port, index) => {
             return (

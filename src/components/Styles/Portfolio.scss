@@ -3,6 +3,15 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ > 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 .box-portfolio {
+    .text-zone {
+        p {
+            color: $grey;
+            max-width: 600px;
+            font-size: 13px;
+            font-weight: 300;
+            animation: pulse 1s;
+        }
+    }
 
     .images-container {
         display: flex;
@@ -11,8 +20,7 @@
         height: fit-content;
         width: 100%;
         opacity: 0;
-        animation: fadeIn 1s forwards;
-        animation-delay: 1s;
+        animation: fadeIn 1.5s forwards;
     }
 
     .image-box {
