@@ -59,6 +59,21 @@
             }
         }
     }
+
+    @media screen and (orientation: landscape) and (max-width: 992px ){
+        .box-main {
+            .page {   
+                
+                .text-zone {
+                    margin-bottom: 50px;
+                }
+
+                .box-effect {
+                    padding-top: 10%;
+                }
+           }
+        }
+    }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 768px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
@@ -84,10 +99,6 @@
     .box-main {
         .page {
             padding-top: 130px;
-
-            .grid-container {
-                grid: 'first' 'second' 'second';
-            }
 
             .text-zone {
                 align-items: center;
