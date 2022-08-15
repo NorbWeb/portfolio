@@ -2,14 +2,14 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-.box-about {
+.page .box-about .grid-container {
 
     .text-zone {
         grid-area: first;
 
-
         p {
             color: $grey;
+            max-width: 600px;
 
             a {
                 text-decoration: none;
@@ -21,18 +21,17 @@
     .box-effect {
         grid-area: second;
         padding: 150px 0px 1rem 0px;
-        width: 100%;
     }
 
     .stage-cube-cont {
-        width: 50%;
-        height: calc(30% + 500px);
-        top: 0;
-        padding-top: 20%;
-        margin-left: 0;
-        position: absolute;
-        right: 0;
-        overflow: hidden;
+        width: 100%;
+        // height: calc(30% + 500px);
+        // top: 0;
+        // padding-top: 20%;
+        // margin-left: 0;
+        // position: absolute;
+        // right: 0;
+        // overflow: hidden;
     }
     
     
@@ -102,7 +101,11 @@
 
 @media screen and (max-width: 992px) {
 
-    .box-about {
+    .page .box-about .grid-container {
+
+        .text-zone {
+            width: 60%;
+        }
 
         .box-effect {
             height: 50vh;
@@ -115,7 +118,7 @@
 
 @media screen and (max-width: 576px) {
 
-    .box-about {
+    .page .box-about .grid-container {
 
         .box-effect {
             padding-top: 0px;

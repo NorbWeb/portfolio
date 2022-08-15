@@ -1,6 +1,6 @@
 @import '../../App.scss';
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ extra large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 .box-main {
     width: 100%;
@@ -14,26 +14,32 @@
             display: grid;
             grid: 'first second second';
             gap: 1rem;
+            width: 100%;
         }
 
         h1 {
             font-family: 'Kanit', sans-serif;
             font-weight: 500;
-            font-size: clamp(2rem, 7.5vw, 4rem);
+            font-size: 4rem;
             color: $primary-color;
         }
 
         .text-zone {
+            grid-area: first;
             display: flex;
             flex-direction: column;
             gap: 2rem;
             margin: 150px 0px 0px 50px;
-            width: 45vw;
+        }
+
+        .box-effect {
+            grid-area: second;
+            min-width: 300px;
         }
     }
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ middle ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 @media screen and (max-width: 992px) {
     .box-main {
@@ -45,13 +51,28 @@
             }
 
             h1 {
-                font-size: clamp(2rem, 7vw, 4rem);
+                font-size: 3.3rem;
             }
 
             .text-zone {
                 margin: 0px;
-                width: 100%;
-                min-width: 50vw;
+            }
+        }
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ medium ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 768px) {
+    .box-main {
+        .page {
+
+            .grid-container {
+                grid: 'first' 'second';
+            
+                .box-effect {
+                    padding-top: 20px;
+                }
             }
         }
     }
@@ -74,13 +95,9 @@
                 width: 100%;
 
                 h1 {
+                    font-size: clamp(1rem, 12vw,3rem);
                     width: 100%;
                 }
-            }
-
-            .contact-btn {
-                background-color: $primary-color;
-                color: $dark;
             }
         }
     }
