@@ -1,12 +1,10 @@
 @import '../../App.scss';
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ large ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ > 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-.page .box-about .grid-container {
+.box-about {
 
     .text-zone {
-        grid-area: first;
-
         p {
             color: $grey;
             max-width: 600px;
@@ -25,6 +23,7 @@
 
     .stage-cube-cont {
         width: 100%;
+        height: 100%;
         // height: calc(30% + 500px);
         // top: 0;
         // padding-top: 20%;
@@ -97,32 +96,24 @@
     }
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ middle ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 @media screen and (max-width: 992px) {
 
-    .page .box-about .grid-container {
+    .box-about {
 
-        .text-zone {
-            width: 60%;
-        }
-
-        .box-effect {
-            height: 50vh;
-        }
+       
     }
 
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ small ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 556px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 @media screen and (max-width: 576px) {
 
-    .page .box-about .grid-container {
+    .box-about {
 
-        .box-effect {
-            padding-top: 0px;
-        }
+        
     }
 
 }
