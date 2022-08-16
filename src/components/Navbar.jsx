@@ -44,7 +44,7 @@ const Navbar = () => {
   const menuItems = [
     {
       name: 'Home',
-      path: '/home',
+      path: '/',
       icon: faHome,
     },
     {
