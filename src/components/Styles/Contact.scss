@@ -1,0 +1,268 @@
+@import '../../App.scss';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ > 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+.box-contact {
+
+    .text-zone {
+
+        p {
+            color: $grey;
+            max-width: 600px;
+            font-size: 13px;
+            font-weight: 300;
+            animation: pulse 1s;
+
+            &:nth-of-type(1) {
+                animation-delay: 0.1s;
+            }
+    
+            &:nth-of-type(2) {
+                animation-delay: 0.2s;
+            }
+    
+            &:nth-of-type(3) {
+                animation-delay: 0.3s;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                font-weight: 600;
+            }
+        }
+
+        .contact-form {
+            width: 100%;
+
+            form {
+                $gap: 10px;
+
+                input[type='text'],
+                input[type='email'] {
+                    width: 100%;
+                    background-color: $form-color;
+                    height: 50px;
+                    font-size: 16px;
+                    color: #fff;    
+                    padding: 0 20px;
+                    margin-bottom: $gap;
+                    box-sizing: border-box;
+                    border: none;
+                    border-radius: 10px;
+                    opacity: 0;
+                    animation: fadeInUp 1s;
+                    animation-fill-mode: forwards;
+                    
+
+                    &:focus {
+                        outline: 3px outset $hover-color;
+                        border-radius: 10px;
+                    }
+                }
+
+                input[name='subject'] {
+                    margin-bottom: 0px;
+                    opacity: 0;
+                    animation: fadeInUp 1s 0.2s;
+                    animation-fill-mode: forwards;
+                }
+
+                .form-top {
+                    display: flex;
+                    flex-direction: row;
+                    gap: $gap;
+                }
+
+                .form-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    gap: $gap;
+
+                    &:last-child {
+                        align-items: flex-end;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    border: none;
+                    border-radius: 10px 10px 0px 10px;
+                    background: $form-color;
+                    height: 50px;
+                    font-size: 16px;
+                    color: #fff;
+                    padding: 20px;
+                    min-height: 150px;
+                    opacity: 0;
+                    animation: fadeInUp 1s 0.3s;
+                    animation-fill-mode: forwards;
+
+                    &:focus {
+                        outline: 3px outset $hover-color;
+                        border-radius: 10px 10px 0px 10px;
+                    }
+                }
+            }
+            
+            .submit-button {
+                @include button(150px);
+                margin-top: 25px;
+                background-color: transparent;
+                opacity: 0;
+                animation: fadeIn 0.5s 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+
+    .info-map {
+        position: fixed;
+        background-color: #272727;
+        top: 50px;
+        right: 50px;
+        z-index: 999999;
+        width: 300px;
+        height: 154px;
+        border-radius: 10px;
+        padding: 20px;
+        color: #fff;
+        font-family: 'Helvetica';
+        font-size: 17px;
+        font-weight: 300;
+        opacity: 0;
+        animation: fadeInRight 1s 0.5s;
+        animation-fill-mode: forwards;
+    
+        span {
+            display: block;
+        }
+    }
+    
+    .map-wrap {
+        position: relative;
+        background: rgba(37, 71, 156, 0.1);
+        height: inherit;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        margin-top: 50px;
+        animation: zoomIn 1s 0.5s;
+        animation-fill-mode: both;
+    }
+    
+    .leaflet-container {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+
+    
+        .leaflet-popup {
+            margin-bottom: 25px;
+        }
+    
+        .leaflet-popup-content-wrapper {
+            font-size: 12px;
+            width: 150px;
+            border: 1px solid black;
+            background-color: $hover-color;
+        }
+    
+        .leaflet-popup-tip {
+            border: 1px solid black;
+            background-color: $hover-color;
+        }
+    }
+
+    .box-effect {
+        min-width: 300px;
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 992px) and (orientation:portrait){
+    .box-contact {
+
+        .map-wrap {
+            position: relative;
+            background: rgba(37, 71, 156, 0.1);
+            height: 100%;
+            width: 100%;
+            margin: 10px 0px 10px 0px;
+
+            .leaflet-container {
+                border-radius: 0px 0px 10px 10px;
+            }
+
+        }
+
+        .info-map {
+            position: relative;
+            background-color: #272727;
+            left: 0%;
+            top: 0%;
+            z-index: 999999;
+            width: 100%;
+            height: fit-content;
+            margin-bottom: -10px;
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px) and (orientation:landscape){
+    .box-contact {
+
+        .map-wrap {
+            position: relative;
+            background: rgba(37, 71, 156, 0.1);
+            height: 23.8rem;
+            min-height: 350px;
+            width: 100%;
+            margin: 10px 0px 10px 0px;
+
+            .leaflet-container {
+                border-radius: 0px 0px 10px 10px;
+            }
+
+        }
+
+        .info-map {
+            position: relative;
+            background-color: #272727;
+            left: 0%;
+            top: 0%;
+            z-index: 2;
+            width: 100%;
+            height: fit-content;
+            margin-bottom: -10px;
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 768px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 768px) {
+
+    .box-contact {
+
+        .map-wrap {
+            position: relative;
+            background: rgba(37, 71, 156, 0.1);
+            height: inherit;
+            width: 100%;
+            height: 300px;
+            margin: 10px 0px 10px 0px;
+        }
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 576px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 576px) {
+
+}

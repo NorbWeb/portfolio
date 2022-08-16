@@ -1,52 +1,46 @@
-// $primary-color:#ffd700;
-$primary-color:#E6BC57;
-$hover-color:#94E48C;
-$form-color:#DB659B;
-$bg-one:rgb(37, 71, 156);
-$bg-two:#E66F45;
-
-
 @import 'animate.css';
-@import '../node_modules/loaders.css/src/animations/pacman.scss';
 
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
-}
+// Theme colors ----------------------------------------------------------------------------------
 
-@font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
-}
+$primary-color:#e6bc57;
+$secondary-color:#faa55c;
+$hover-color:#82e6fa;
+$form-color:#9440AD;
+$bg-one:#7650fa;
+$bg-two:#FAA55C;
+$dark:#272727;
+$grey:#ddd;
 
-@font-face {
-  font-family: 'Coolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
-}
+// Component styles ------------------------------------------------------------------------------
 
-input,
-textarea {
-  font-family: 'Helvetica Neue';
-}
+@mixin button($width:fit-content, $height: fit-content) {
+    white-space: nowrap;
+    color: $primary-color;
+    letter-spacing: 3px;
+    font-weight: 500;
+    border: 5px outset $primary-color;
+    border-radius: 20px;
+    padding: 10px 18px;
+    transition: all 0.15s ease-in-out ;
+    box-shadow: 1px 2px 2px $dark;
+    width: $width;
+    height: $height;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+        
+        &:focus {
+            outline: 3px outset #82e6fa;
+        }
+        
+        &:hover {
+            color: $dark;
+            background-color: $primary-color;
+        }
 
-.loader-active {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  width: 50px;
-  height: 50px;
-  animation: fadeOut 1s 1s;
-  animation-fill-mode: forwards;
-}
-
-@media (max-width: 560px) {
-    .loader-active {
-      position: absolute;
-      margin-top: 50vh;
-      margin-left: 50%;
+    @media (pointer: coarse) {
+        color: $dark;
+        background-color: ($primary-color);
     }
+
 }

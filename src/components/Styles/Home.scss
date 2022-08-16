@@ -1,0 +1,224 @@
+@import '../../App.scss';
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ > 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+.box-home {
+
+    .letter-box {
+        $w1: calc(4rem * 0.8);
+        $w2: calc(3rem * 0.8);
+
+        display: inline-block;
+        width: calc(4rem * 0.8);
+        width: clamp($w2, 4.3vw, $w1);
+        margin-left: 1rem;
+        margin-right: 2px;
+
+        &:hover {
+            animation: rubberBand 1s;
+        }
+
+        img {
+            position: relative;
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            animation: rotateIn 1s linear both;
+            animation-fill-mode: both;
+            bottom: 10px;
+        }
+    }
+
+    h2 {
+        color: $secondary-color;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        opacity: 0;
+        animation: fadeInUp 1.5s 2s forwards;
+    }
+
+    .box-btn {
+        opacity: 0;
+        animation: fadeInUp 1.5s 2.5s forwards;     
+
+        .contact-btn {
+            @include button;
+            display: inline-block;
+            text-decoration: none;
+            }
+        
+    }
+
+    .box-effect {
+        grid-area: second;
+        padding: 150px 0px 1rem 0px;
+
+        img {
+            width: 35vw;
+            height: 35vw;
+            animation: fadeInLeft 1.5s 2s forwards;
+            opacity: 0;
+            overflow: hidden;
+        }
+    }
+        
+        .grid-box{
+            width: 35vw;
+            height: 35vw;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            border-radius: 30px;
+
+            $tile: calc(35vw / 6);
+
+            @for $i from 1 through 36 {
+
+                .tile {
+                    width: $tile;
+                    height: $tile;
+                    opacity: 1;
+                }
+                
+                img {
+                    object-fit: none;
+                    width: calc($tile);
+                    height: calc($tile);
+                }
+            
+            @for $j from 1 through 6 {
+                .img-#{$j} {
+                    object-position: calc((#{$j} - 1) * 20%) 0%;
+                }
+                $j1: calc($j + 6);
+                .img-#{$j1} {
+                    object-position: calc((#{$j} - 1) * 20%) 20%;
+                }
+                $j2: calc($j + 12);
+                .img-#{$j2} {
+                    object-position: calc((#{$j} - 1) * 20%) 40%;
+                }
+                $j3: calc($j + 18);
+                .img-#{$j3} {
+                    object-position: calc((#{$j} - 1) * 20%) 60%;
+                }
+                $j4: calc($j + 24);
+                .img-#{$j4} {
+                    object-position: calc((#{$j} - 1) * 20%) 80%;
+                }
+                $j5: calc($j + 30);
+                .img-#{$j5} {
+                    object-position: calc((#{$j} - 1) * 20%) 100%;
+                }
+            }    
+            
+            .tile-1 {
+                border-radius: 30px 0px 0px 0px;
+            }
+            .tile-6 {
+                border-radius: 0px 30px 0px 0px;
+            }
+            .tile-31 {
+                border-radius: 0px 0px 0px 30px;
+            }
+            .tile-36 {
+                border-radius: 0px 0px 30px 0px;
+            }
+
+            .tile-#{$i} {
+                animation: flipInY calc(random(5) * 0.5s) forwards;                 
+            }
+
+        }
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 992px) {
+    .box-home {   
+
+        .letter-box {
+           width: calc(3.3rem * 0.8);
+
+            img {
+                bottom: 8px;
+            }
+        }
+
+        h2 {
+            width: 100%;
+        }
+
+        .box-effect {
+
+            img {
+                width: 100%;
+                height: auto;
+                padding-top: 40px;
+            }
+
+            .grid-box{
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                border-radius: 30px;
+
+                $tile: 50px;
+
+                .tile {
+                    height: $tile;
+                    width: $tile;
+                    img {
+                        object-fit: none;
+                        width: $tile;
+                        height: $tile;
+                    }
+                }
+            }    
+        }    
+    } 
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 768px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 768px) {
+    .box-home {
+
+        .box-effect {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 60%;
+                height: auto; 
+            }
+        }
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 556px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+
+@media screen and (max-width: 576px) {
+    .box-home {
+
+        .letter-box {
+            $font-h1: clamp(1rem, 12vw,3rem);
+            width: clamp(0.8rem, 12vw, 2.4rem);
+
+            img {
+                bottom: clamp(4px, 1rem, 9px);
+            }
+        }
+       
+        .box-btn {
+            width: 100%;
+
+            .contact-btn {
+                background-color: $primary-color;
+                color: $dark;
+            }
+        }        
+    }    
+}
