@@ -38,18 +38,46 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .progress-tag {
+            z-index: 4;
+            background: repeating-linear-gradient(45deg, $grey, #fff 20px, #de1818 20px, #ff0000 40px);
+            position: relative;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            height: 60px;
+            width: 300px;
+            transform: rotate(-20deg);
+            font-size: 20px;
+            font-weight: 600;
+            text-shadow: rgba(100, 100, 100, 0.5) 1px 0px 1px;
+            opacity: 0.7;
+            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            &:nth-child(2) {
+            transform: rotate(25deg);
+            margin-top: 10px;
+            z-index: 3;
+            }
+        }
     
         .info {
             margin-top: 10px;
             height: 100px;
-            color: #fff;
+            color: $grey;
+            font-weight: 300;
             line-height: 20px;
+            text-shadow: $dark 1px 1px 3px
+
         }
     
         .content {
             position: absolute;
             width: 100%;
-            z-index: 3;
+            z-index: 5;
             padding: 10px 20px;
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             background: linear-gradient(
@@ -65,18 +93,20 @@
         .title {
             margin-bottom: 0;
             margin-top: 0;
-            color: #fff;
+            color: $primary-color;
             font-size: 24px;
             font-weight: 500;
             line-height: 24px;
+            text-shadow: $dark 1px 1px 3px
         }
     
         .description {
             font-size: 14px;
             margin-bottom: 5px;
             margin-top: 5px;
-            color: #fff;
+            color: $grey;
             font-weight: 700;
+            text-shadow: $dark 1px 1px 3px
         }
     
         .btn {
@@ -136,10 +166,6 @@
     .box-portfolio{
         .images-container {
                 justify-content: center;
-            .image-box {
-                width: 90%;
-            }
-
         }
     }
 }

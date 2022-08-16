@@ -6,7 +6,7 @@ $primary-color:#e6bc57;
 $secondary-color:#faa55c;
 $hover-color:#82e6fa;
 $form-color:#9440AD;
-$bg-one:rgb(118, 80, 250);
+$bg-one:#7650fa;
 $bg-two:#FAA55C;
 $dark:#272727;
 $grey:#ddd;
@@ -28,7 +28,11 @@ $grey:#ddd;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
+        
+        &:focus {
+            outline: 3px outset #82e6fa;
+        }
+        
         &:hover {
             color: $dark;
             background-color: $primary-color;
@@ -36,7 +40,7 @@ $grey:#ddd;
 
     @media (pointer: coarse) {
         color: $dark;
-        background-color: $primary-color;
+        background-color: ($primary-color);
     }
 
 }

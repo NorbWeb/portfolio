@@ -20,7 +20,7 @@
         h1 {
             font-family: 'Kanit', sans-serif;
             font-weight: 500;
-            font-size: 4rem;
+            font-size: clamp(3rem, 5vw ,4rem);
             color: $primary-color;
         }
 
@@ -34,7 +34,6 @@
 
         .box-effect {
             grid-area: second;
-            min-width: 300px;
         }
     }
 }

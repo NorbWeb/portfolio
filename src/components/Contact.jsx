@@ -7,6 +7,10 @@ import './Styles/Contact.scss'
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const refForm = useRef()
+  const [inputName, setInputName] = useState('')
+  const [inputEmail, setInputEmail] = useState('')
+  const [inputSubject, setInputSubject] = useState('')
+  const [inputMessage, setInputMessage] = useState('')
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,7 +31,10 @@ const Contact = () => {
       .then(
         () => {
           alert('Message successfully send!')
-          window.location.reload(false)
+          setInputEmail('')
+          setInputMessage('')
+          setInputName('')
+          setInputSubject('')
         },
         () => {
           alert('Failed to send the message, please try again')
@@ -55,17 +62,35 @@ const Contact = () => {
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
               <div className="form-top">
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
-              <div className='form-bottom'>
                 <input
+                  value={inputName}
+                  onChange={(event) => setInputName(event.target.value)}
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  value={inputEmail}
+                  onChange={(event) => setInputEmail(event.target.value)}
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div className="form-bottom">
+                <input
+                  value={inputSubject}
+                  onChange={(event) => setInputSubject(event.target.value)}
                   placeholder="Subject"
                   type="text"
                   name="subject"
                   required
                 />
                 <textarea
+                  value={inputMessage}
+                  onChange={(event) => setInputMessage(event.target.value)}
                   placeholder="Message"
                   name="message"
                   required
@@ -85,7 +110,6 @@ const Contact = () => {
               Somewhere in Potsdam
               <br />
             </span>
-            <span className="span-email">norbert.madauss@gmail.com</span>
           </div>
           <div className="map-wrap">
             <MapContainer center={[52.394919, 13.060529]} zoom={13}>

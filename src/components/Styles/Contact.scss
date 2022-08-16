@@ -119,10 +119,10 @@
     .info-map {
         position: fixed;
         background-color: #272727;
-        top: 85px;
-        right: 85px;
+        top: 50px;
+        right: 50px;
         z-index: 999999;
-        width: 267px;
+        width: 300px;
         height: 154px;
         border-radius: 10px;
         padding: 20px;
@@ -136,11 +136,6 @@
     
         span {
             display: block;
-        }
-        .span-email {
-            font-size: 16px;
-            padding-top: 20px;
-            color: $primary-color;
         }
     }
     
@@ -178,11 +173,15 @@
             background-color: $hover-color;
         }
     }
+
+    .box-effect {
+        min-width: 300px;
+    }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ < 996px ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) and (orientation:portrait){
     .box-contact {
 
         .map-wrap {
@@ -204,6 +203,38 @@
             left: 0%;
             top: 0%;
             z-index: 999999;
+            width: 100%;
+            height: fit-content;
+            margin-bottom: -10px;
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px) and (orientation:landscape){
+    .box-contact {
+
+        .map-wrap {
+            position: relative;
+            background: rgba(37, 71, 156, 0.1);
+            height: 23.8rem;
+            min-height: 350px;
+            width: 100%;
+            margin: 10px 0px 10px 0px;
+
+            .leaflet-container {
+                border-radius: 0px 0px 10px 10px;
+            }
+
+        }
+
+        .info-map {
+            position: relative;
+            background-color: #272727;
+            left: 0%;
+            top: 0%;
+            z-index: 2;
             width: 100%;
             height: fit-content;
             margin-bottom: -10px;
