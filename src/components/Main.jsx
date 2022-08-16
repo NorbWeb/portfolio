@@ -8,6 +8,11 @@ const Main = () => {
     <Navbar />
     <div className="page">
       <Outlet />
+      <div className='floating-tag'>&lt;body&gt;</div>
+      <div className='floating-tag'>&lt;/body&gt;</div>
+      <div className='floating-tag'>&lt;div&gt;</div>
+      <div className='floating-tag'>&lt;/div&gt;</div>
+      <div className='floating-tag'>&lt;console.log()&gt;</div>
     </div>
   </div>
   )

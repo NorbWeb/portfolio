@@ -7,6 +7,52 @@
     height: 100%;
     font-family: 'Didact Gothic', sans-serif;
 
+    .floating-tag {
+        color: $primary-color;
+        position: fixed;
+        z-index: -1;
+        font-family: 'Bilbo Swash Caps';
+        font-size: 20px;
+        animation: aniTags 20s infinite;
+    
+        @keyframes aniTags {
+            0% {
+                opacity: 0.05;
+            }
+
+            50% {
+                opacity: 0.3;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 0.05;
+            }
+        }
+
+        &:nth-child(2){
+            top: 15%;
+            left: 20%;
+
+        }
+        &:nth-child(3){
+            top: 50%;
+            left: 40%;
+        }
+        &:nth-child(4){
+            top: 60%;
+            left: 75%;
+        }
+        &:nth-child(5){
+            top: 80%;
+            left: 80%;
+        }
+        &:nth-child(6){
+            top: 95%;
+            left: 40%;
+        }
+    }
+
     .page {
         padding: 0px 50px 0px 80px;
 
