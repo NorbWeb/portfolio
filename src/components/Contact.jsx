@@ -56,7 +56,7 @@ const Contact = () => {
           <p>
             Do you have some questions about coding, my work or myself? Do you
             want to work with me or have some interesting ideas? Then just
-            contact me! I am looking forward to hearing from you. And if you
+            contact me! I'm looking forward to hearing from you. And if you
             have a job offer, don't hesitate and hit the keys!{' '}
           </p>
           <div className="contact-form">

@@ -15,7 +15,7 @@ import { useEffect, useState } from 'react'
 import Logo from '../assets/images/letter-n3.png'
 import SubLogo from '../assets/images/name.png'
 import './Styles/Navbar.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -84,10 +84,10 @@ const Navbar = () => {
 
   return (
     <div className="box-navbar">
-      <div className="box-logo">
+      <Link to='/' className="box-logo">
         <img src={Logo} alt="Logo" />
         <img src={SubLogo} alt="SubLogo" />
-      </div>
+      </Link>
 
       <nav className={open ? 'show' : null}>
         {menuItems.map((item) => {
