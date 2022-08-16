@@ -44,7 +44,7 @@
                     background-color: $form-color;
                     height: 50px;
                     font-size: 16px;
-                    color: #fff;    
+                    color: #fff;
                     padding: 0 20px;
                     margin-bottom: $gap;
                     box-sizing: border-box;
@@ -54,6 +54,9 @@
                     animation: fadeInUp 1s;
                     animation-fill-mode: forwards;
                     
+                    &::placeholder {
+                        color: #fff;
+                    }
 
                     &:focus {
                         outline: 3px outset $hover-color;
@@ -97,6 +100,10 @@
                     opacity: 0;
                     animation: fadeInUp 1s 0.3s;
                     animation-fill-mode: forwards;
+
+                    &::placeholder {
+                        color: #fff;
+                    }
 
                     &:focus {
                         outline: 3px outset $hover-color;
@@ -265,4 +272,15 @@
 
 @media screen and (max-width: 576px) {
 
+    .box-contact {
+        .info-map {
+            animation: none;
+            opacity: 1;
+        }
+
+        .map-wrap {
+            animation: none;
+            opacity: 1;
+        }
+    }
 }
