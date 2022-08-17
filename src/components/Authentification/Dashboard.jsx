@@ -16,6 +16,7 @@ const Dashboard = () => {
         setUser(null)
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return <div>{user ? <Form /> : <Login />}</div>
