@@ -13,3 +13,8 @@ body {
   padding: 0px;
   background: linear-gradient(45deg, #25479c, #E66F45);
 }
+
+.dashboard {
+  padding-left: 200px;
+  padding-top: 200px;
+}
