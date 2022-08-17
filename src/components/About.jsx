@@ -34,28 +34,42 @@ const About = () => {
           </h1>
           <div>
             <p>
-              I am a junior fullstack web developer with a lot of passion. By
-              now I have complete a bootcamp at
-              <a href="https://www.wildcodeschool.com/en-GB">
+              Hello, my Name is Norbert and I am a junior fullstack web
+              developer and got a lot of passion building web applications.
+              Until now I have completed a bootcamp at
+              <a
+                href="https://www.wildcodeschool.com/en-GB"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {' '}
                 Wild Code School{' '}
               </a>
-              and I am looking forward for interessting and challenging
-              projects. I have got some private projects I am work on, check
-              this out in the
-              <Link to="/portfolio"> My Work </Link> section.
+              and I am looking forward to interesting new challenges. I got a
+              few private projects in the works, check them out under the
+              <Link to="/portfolio"> My Work </Link> section link.
             </p>
             <p>
-              My job portfolio looking like a colourful mix. After school I went
-              to military service for a couple of years. Then I started to study
-              social sience at the university of Rostock. But I heard a call for
-              manual work, so I decide to become a destiller. Yup, I can
-              destille booze 🥃.
+              My job portfolio is a diverse mix. After school I attended
+              military service for a couple of years, then I chose to go to
+              college and study social siences at the university of Rostock. Not
+              being completely convinced with that decision I followed the call
+              of the craft and became a distiller. Yup, I can make booze 🥃.
             </p>
             <p>
-              So why coding now? I was always tempted to code, but I never know
-              how to start. But then a live changing event occured. I packed my
-              things and went on that journey.
+              So why coding now? Because I always wanted to. I was always
+              attracted to code, but I never knew where to start. But after I
+              experienced a life changing event, I packed my stuff and decided
+              to go down that journey. Check out my
+              <a
+                href="https://www.linkedin.com/in/norbert-madauss/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {' '}
+                linkedIn{' '}
+              </a>{' '}
+              profile for further information.
             </p>
           </div>
         </div>
