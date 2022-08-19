@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LogoTitle from '../assets/images/letter-n3.png'
+import Logo400 from '../assets/images/letter-n3-400x400.png'
 import AnimatedLetters from './AnimatedLetters'
 import './Styles/Home.scss'
 
@@ -17,6 +18,18 @@ const Home = () => {
   //   '1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36'.split(
   //     ' '
   //   )
+
+  const arr = []
+  let squareRoot = 0
+  const tileNumber = (num) => {
+    for (let i = 1; i <= num; i++) {
+      arr.push(i)
+      squareRoot = Math.sqrt(num)
+    }
+    return arr, squareRoot
+  }
+
+  tileNumber(9)
 
   return (
     <div className="box-home">
@@ -51,14 +64,26 @@ const Home = () => {
           </div>
         </div>
         <div className="box-effect">
-          <img alt='Logo' src={LogoTitle}/>
-          {/* <div className="grid-box">
+          {/* <img alt='Logo' src={LogoTitle}/> */}
+          <div
+            className="grid-box"
+            style={{
+              gridTemplateColumns: `repeat(${squareRoot}, 1fr)`,
+              gridTemplateRows: `repeat(${squareRoot}, 1fr)`,
+            }}
+          >
             {arr.map((tile, index) => {
-              return <div key={tile + index} className={`tile tile-${tile}`}>
-                <img className={`img-${tile}`} src={LogoTitle} alt={`Tile ${tile}`} />
-              </div>
+              return (
+                <div key={tile + index} className={`tile tile-${tile}`}>
+                  <img
+                    className={`img-${tile}`}
+                    src={Logo400}
+                    alt={`Tile ${tile}`}
+                  />
+                </div>
+              )
             })}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

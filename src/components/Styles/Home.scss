@@ -53,80 +53,113 @@
         grid-area: second;
         padding: 150px 0px 1rem 0px;
 
-        img {
-            width: 35vw;
-            height: 35vw;
-            animation: fadeInLeft 1.5s 2s forwards;
-            opacity: 0;
-            overflow: hidden;
-        }
+        // img {
+        //     width: 35vw;
+        //     height: 35vw;
+        //     animation: fadeInLeft 1.5s 2s forwards;
+        //     opacity: 0;
+        //     overflow: hidden;
+        // }
     }
         
         .grid-box{
-            width: 35vw;
-            height: 35vw;
+            $length: 400px;
+            $squareRoot: 3;
+            
+            width: $length;
+            height: $length;
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(6, 1fr);
             border-radius: 30px;
+            gap: 0px;
 
-            $tile: calc(35vw / 6);
+            $tile: calc($length / $squareRoot);
+
+            img {
+                object-fit: none;
+                width: $tile;
+                height: $tile;
+            }
+
+            .tile {
+                width: $tile;
+                height: $tile;
+                opacity: 1;
+                overflow: hidden;
+            }
+
+            // .img-1 {
+            //     object-position: 0% 0%;
+            // }
+            // .img-2 {
+            //     object-position: 100% 0%;
+            // }
+            // .img-3 {
+            //     object-position: 0% 100%;
+            // }
+            // .img-4 {
+            //     object-position: 100% 100%;
+            // }
+
+            .img-1 {
+                object-position: 0% 0%;
+            }
+            .img-2 {
+                object-position: 50% 0%;
+            }
+            .img-3 {
+                object-position: 100% 0%;
+            }
+            .img-4 {
+                object-position: 0% 50%;
+            }
+            .img-5 {
+                object-position: 50% 50%;
+            }
+            .img-6 {
+                object-position: 100% 50%;
+            }
+            .img-7 {
+                object-position: 0% 100%;
+            }
+            .img-8 {
+                object-position: 50% 100%;
+            }
+            .img-9 {
+                object-position: 100% 100%;
+            }
 
             @for $i from 1 through 36 {
-
-                .tile {
-                    width: $tile;
-                    height: $tile;
-                    opacity: 1;
-                }
-                
-                img {
-                    object-fit: none;
-                    width: calc($tile);
-                    height: calc($tile);
-                }
-            
-            @for $j from 1 through 6 {
-                .img-#{$j} {
-                    object-position: calc((#{$j} - 1) * 20%) 0%;
-                }
-                $j1: calc($j + 6);
-                .img-#{$j1} {
-                    object-position: calc((#{$j} - 1) * 20%) 20%;
-                }
-                $j2: calc($j + 12);
-                .img-#{$j2} {
-                    object-position: calc((#{$j} - 1) * 20%) 40%;
-                }
-                $j3: calc($j + 18);
-                .img-#{$j3} {
-                    object-position: calc((#{$j} - 1) * 20%) 60%;
-                }
-                $j4: calc($j + 24);
-                .img-#{$j4} {
-                    object-position: calc((#{$j} - 1) * 20%) 80%;
-                }
-                $j5: calc($j + 30);
-                .img-#{$j5} {
-                    object-position: calc((#{$j} - 1) * 20%) 100%;
-                }
-            }    
-            
-            .tile-1 {
-                border-radius: 30px 0px 0px 0px;
-            }
-            .tile-6 {
-                border-radius: 0px 30px 0px 0px;
-            }
-            .tile-31 {
-                border-radius: 0px 0px 0px 30px;
-            }
-            .tile-36 {
-                border-radius: 0px 0px 30px 0px;
-            }
+   
+            // @for $j from 1 through $squareRoot {
+            //     .img-#{$j} {
+            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 0%;
+            //     }
+            //     $j1: calc($j + calc($squareRoot * 1));
+            //     .img-#{$j1} {
+            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 33%;
+            //     }
+            //     $j2: calc($j + calc($squareRoot * 2));
+            //     .img-#{$j2} {
+            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 66%;
+            //     }
+            //     $j3: calc($j + calc($squareRoot * 3));
+            //     .img-#{$j3} {
+            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 100%;
+            //     }
+                // $j4: calc($j + 24);
+                // .img-#{$j4} {
+                //     object-position: calc((#{$j} - 1) * 20%) 80%;
+                // }
+                // $j5: calc($j + 30);
+                // .img-#{$j5} {
+                //     object-position: calc((#{$j} - 1) * 20%) 100%;
+                // }
+            // }
 
             .tile-#{$i} {
-                animation: flipInY calc(random(5) * 0.5s) forwards;                 
+                @if (random() <= 0.5)
+               { animation: flipInY calc(random(5) * 0.5s + 1s) forwards; }
+               @else { animation: flipInX calc(random(5) * 0.5s + 1s) forwards;}               
             }
 
         }
