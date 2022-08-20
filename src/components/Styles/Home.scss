@@ -64,7 +64,7 @@
         
         .grid-box{
             $length: 400px;
-            $squareRoot: 3;
+            $squareRoot: 8;
             
             width: $length;
             height: $length;
@@ -87,82 +87,66 @@
                 overflow: hidden;
             }
 
-            // .img-1 {
-            //     object-position: 0% 0%;
-            // }
-            // .img-2 {
-            //     object-position: 100% 0%;
-            // }
-            // .img-3 {
-            //     object-position: 0% 100%;
-            // }
-            // .img-4 {
-            //     object-position: 100% 100%;
-            // }
+            @for $i from 1 through calc($squareRoot * $squareRoot) {
+                $step1: 0%;
+                $step2: calc(100% / 7);
+                $step3: calc(100% / 7 * 2);
+                $step4: calc(100% / 7 * 3);
+                $step5: calc(100% / 7 * 4);
+                $step6: calc(100% / 7 * 5);
+                $step7: calc(100% / 7 * 6);
+                $step8: 100%;
 
-            .img-1 {
-                object-position: 0% 0%;
-            }
-            .img-2 {
-                object-position: 50% 0%;
-            }
-            .img-3 {
-                object-position: 100% 0%;
-            }
-            .img-4 {
-                object-position: 0% 50%;
-            }
-            .img-5 {
-                object-position: 50% 50%;
-            }
-            .img-6 {
-                object-position: 100% 50%;
-            }
-            .img-7 {
-                object-position: 0% 100%;
-            }
-            .img-8 {
-                object-position: 50% 100%;
-            }
-            .img-9 {
-                object-position: 100% 100%;
-            }
+                @for $i from 1 through 8 {
+                    .img-#{$i} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step1;
+                    }
+                }
+                @for $i from 1 through 8 {
+                    .img-#{$i + 8} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step2;
+                    }
+                }
+                @for $i from 1 through 8 {
+                    .img-#{$i + 16} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step3;
+                    }
+                }
+                @for $i from 1 through 8 {
+                    .img-#{$i + 24} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step4;
+                    }
+                }
+                @for $i from 1 through 8 {
+                    .img-#{$i + 32} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step5;
+                    }
+                }
+                @for $i from 1 through 8 {
+                    .img-#{$i + 40} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step6;
+                    }
+                }
+                @for $i from 1 through 8 {
+                    .img-#{$i + 48} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step7;
+                    }
+                }
+                @for $i from 1 through 8 {
+                    .img-#{$i + 56} {
+                        object-position: calc(100% / 7 * ($i - 1)) $step8;
+                    }
+                }
 
-            @for $i from 1 through 36 {
-   
-            // @for $j from 1 through $squareRoot {
-            //     .img-#{$j} {
-            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 0%;
-            //     }
-            //     $j1: calc($j + calc($squareRoot * 1));
-            //     .img-#{$j1} {
-            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 33%;
-            //     }
-            //     $j2: calc($j + calc($squareRoot * 2));
-            //     .img-#{$j2} {
-            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 66%;
-            //     }
-            //     $j3: calc($j + calc($squareRoot * 3));
-            //     .img-#{$j3} {
-            //         object-position: calc((#{$j} - 1) * calc(100% / $squareRoot)) 100%;
-            //     }
-                // $j4: calc($j + 24);
-                // .img-#{$j4} {
-                //     object-position: calc((#{$j} - 1) * 20%) 80%;
-                // }
-                // $j5: calc($j + 30);
-                // .img-#{$j5} {
-                //     object-position: calc((#{$j} - 1) * 20%) 100%;
-                // }
-            // }
 
-            .tile-#{$i} {
-                @if (random() <= 0.5)
-               { animation: flipInY calc(random(5) * 0.5s + 1s) forwards; }
-               @else { animation: flipInX calc(random(5) * 0.5s + 1s) forwards;}               
+                .tile-#{$i} .x {
+                    animation: flipInX calc(random(5) * 0.5s + 1s) forwards;               
+                }
+                .tile-#{$i} .y {
+                    animation: flipInY calc(random(5) * 0.5s + 1s) forwards;               
+                }
+
             }
-
-        }
     }
 }
 
