@@ -18,18 +18,14 @@ const Home = () => {
   let squareRoot = 0
   const tileNumber = (num) => {
     for (let i = 1; i <= num; i++) {
-      if (Math.random() < 0.5) {
-        arr.push(`${i} x`)
-      } else {
-        arr.push(`${i} y`)
-      }
-
-      squareRoot = Math.sqrt(num)
+      arr.push(i)
     }
+
+    squareRoot = Math.sqrt(num)
     return arr + squareRoot
   }
 
-    tileNumber(64)
+  tileNumber(64)
 
   return (
     <div className="box-home">
