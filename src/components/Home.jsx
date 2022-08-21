@@ -15,12 +15,33 @@ const Home = () => {
   }, [])
 
   const arr = []
+  const randomNumbers = [
+    47, 54, 9, 36, 42, 45, 61, 7, 24, 21, 37, 17, 58, 31, 22, 8, 60, 6, 38, 35,
+    12, 43, 51, 26, 1, 39, 63, 4, 44, 49,
+  ]
+
+  const random = () => {
+    for (let i = 0; i < 32; i++) {
+      const randomNumbers = []
+      let random = Math.floor(Math.random() * (64 - 1)) + 1
+      if (randomNumbers.indexOf(random) !== -1) {
+        randomNumbers.push(random)
+      }
+      return randomNumbers
+    }
+  }
+
+  // console.log(random())
+
   let squareRoot = 0
   const tileNumber = (num) => {
     for (let i = 1; i <= num; i++) {
-      arr.push(i)
+      if (randomNumbers.indexOf(i) !== -1) {
+        arr.push(`${i} x`)
+      } else {
+        arr.push(`${i} y`)
+      }
     }
-
     squareRoot = Math.sqrt(num)
     return arr + squareRoot
   }
