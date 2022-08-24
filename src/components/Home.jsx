@@ -7,17 +7,18 @@ import './Styles/Home.scss'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const [hoverTiles, setHoverTiles] = useState(null)
+  const [hoverTiles, setHoverTiles] = useState([0])
 
   const handleMouseOver = (item) => {
-    setHoverTiles([item, item - 8, item + 1, item + 8, item -1])
+    setHoverTiles([`tile-${item} h`, item - 8, item + 1, item + 8, item -1])
+
   }
 
   const handleMouseOut = () => {
-    setHoverTiles(null)
+    setHoverTiles([0]);
   }
 
-  console.log(hoverTiles);
+  console.log(hoverTiles[0]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -37,6 +38,7 @@ const Home = () => {
   }
 
   tileNumber(64)
+
 
   return (
     <div className="box-home">
@@ -82,10 +84,9 @@ const Home = () => {
               return (
                 <div
                   key={tile + index}
-                  className={`tile tile-${tile}`}
+                  className={`tile tile-${tile} ${hoverTiles[0]}`}
                   onMouseOver={() => handleMouseOver(tile)}
-                  onMouseOut={handleMouseOut}
-                  style={{}}
+                  onMouseOut={() => handleMouseOut()}
                 >
                   <img
                     className={`img-${tile}`}
