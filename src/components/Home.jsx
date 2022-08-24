@@ -7,6 +7,17 @@ import './Styles/Home.scss'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [hoverTiles, setHoverTiles] = useState(null)
+
+  const handleMouseOver = (item) => {
+    setHoverTiles([item, item - 8, item + 1, item + 8, item -1])
+  }
+
+  const handleMouseOut = () => {
+    setHoverTiles(null)
+  }
+
+  console.log(hoverTiles);
 
   useEffect(() => {
     setTimeout(() => {
@@ -60,7 +71,6 @@ const Home = () => {
           </div>
         </div>
         <div className="box-effect">
-          {/* <img alt='Logo' src={LogoTitle}/> */}
           <div
             className="grid-box"
             style={{
@@ -70,7 +80,13 @@ const Home = () => {
           >
             {arr.map((tile, index) => {
               return (
-                <div key={tile + index} className={`tile tile-${tile}`}>
+                <div
+                  key={tile + index}
+                  className={`tile tile-${tile}`}
+                  onMouseOver={() => handleMouseOver(tile)}
+                  onMouseOut={handleMouseOut}
+                  style={{}}
+                >
                   <img
                     className={`img-${tile}`}
                     src={Logo400}
