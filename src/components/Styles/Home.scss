@@ -53,20 +53,11 @@
     .box-effect {
         grid-area: second;
         padding: 150px 0px 1rem 0px;
-
-        // img {
-        //     width: 35vw;
-        //     height: 35vw;
-        //     animation: fadeInLeft 1.5s 2s forwards;
-        //     opacity: 0;
-        //     overflow: hidden;
-        // }
     }
         
     .grid-box{
         $length: 400px;
         $squareRoot: 8;
-        
         width: $length;
         height: $length;
         display: grid;
@@ -74,22 +65,21 @@
         gap: 0px;
 
         $tile: calc($length / $squareRoot);
+        transform: scale(1.2);
 
         img {
             object-fit: none;
             width: $tile;
             height: $tile;
-            z-index: 1;
+
         }
 
         .tile {
             width: $tile;
             height: $tile;
-            // opacity: 0;
-            animation: flipX 0.5s both;
-            $animationDelay: 0.03s;
-            z-index: 2;
-            background-color: $secondary-color;
+            animation: logoAnimation 1.5s both;
+            $animationDelay: 0.1s;
+            overflow: hidden;
             
             &.tile-2, &.tile-9 {
                 animation-delay: $animationDelay;
@@ -136,21 +126,14 @@
         }
 
 
-        @keyframes flipX {
-            0% { transform: rotate(360deg) ;opacity: 0;}
-            // 33% { transform: rotateX(-50deg); opacity: 1;}
-            // 50% { transform: rotateX(30deg); opacity: 1;}
-            // 68% { transform: rotateX(-30deg); opacity: 1;}
-            100% { transform: rotate(0deg) ; opacity: 1;}
+        @keyframes logoAnimation {
+            0% {
+                transform: scale(0) translateX(500px) translateY(500px) translateZ(500px);
+                opacity: 0;
+                border-radius: 50%;
+            }
         }
         
-        @keyframes flipY {
-            0% { transform: rotateY(90deg); opacity: 1;}
-            33% { transform: rotateY(-50deg); opacity: 1;}
-            50% { transform: rotateY(30deg); opacity: 1;}
-            68% { transform: rotateY(-30deg); opacity: 1;}
-            100% { transform: rotateY(0deg); opacity: 1;}
-        }
 
         @for $i from 1 through calc($squareRoot * $squareRoot) {
             $step1: 0%;
@@ -203,14 +186,6 @@
                 }
             }
 
-            
-            // .tile-#{$i}.x {
-            //     animation: flipX calc(random(7) * 0.7s + 1s) calc(random(5) * 0.3s + 1s) forwards;
-            // }
-            // .tile-#{$i}.y {
-            //     animation: flipY calc(random(7) * 0.7s + 1s) calc(random(5) * 0.3s + 1s) forwards;
-            // }
-
         }
     }
 }
@@ -233,33 +208,86 @@
         }
 
         .box-effect {
-
-            img {
-                width: 100%;
-                height: auto;
-                padding-top: 40px;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 320px;
+            height: 320px;
+            margin: 0 auto 30px auto;
 
             .grid-box{
-                width: 100%;
-                height: auto;
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: repeat(6, 1fr);
-                border-radius: 30px;
+                transform: scale(0.8);        
 
-                $tile: 50px;
+                       
+            //     .tile {
+            //         animation: logoAnimation2 1.5s both;
+            //         $animationDelay: 0.15s;
+            //         $evenDelay: 0.3s;
 
-                .tile {
-                    height: $tile;
-                    width: $tile;
-                    img {
-                        object-fit: none;
-                        width: $tile;
-                        height: $tile;
-                    }
+            //        &.tile-1, &.tile-3, &.tile-5, &.tile-7 {
+            //         animation-delay: $animationDelay;
+            //        }
+            //        &.tile-2, &.tile-4, &.tile-6, &.tile-8 {
+            //         animation-delay: $animationDelay * 2 + $evenDelay;
+            //        }
+            //        &.tile-9, &.tile-11, &.tile-13, &.tile-15 {
+            //         animation-delay: $animationDelay * 3;
+            //        }
+            //        &.tile-10, &.tile-12, &.tile-14, &.tile-16 {
+            //         animation-delay: $animationDelay * 4 + $evenDelay;
+            //        }
+            //        &.tile-17, &.tile-19, &.tile-21, &.tile-23 {
+            //         animation-delay: $animationDelay * 5;
+            //        }
+            //        &.tile-18, &.tile-20, &.tile-22, &.tile-24 {
+            //         animation-delay: $animationDelay * 6 + $evenDelay;
+            //        }
+            //        &.tile-25, &.tile-27, &.tile-29, &.tile-31 {
+            //         animation-delay: $animationDelay * 7;
+            //        }
+            //        &.tile-26, &.tile-28, &.tile-30, &.tile-32 {
+            //         animation-delay: $animationDelay * 8 + $evenDelay;
+            //        }
+            //        &.tile-33, &.tile-35, &.tile-37, &.tile-39 {
+            //         animation-delay: $animationDelay * 9;
+            //        }
+            //        &.tile-34, &.tile-36, &.tile-38, &.tile-40 {
+            //         animation-delay: $animationDelay * 10 + $evenDelay;
+            //        }
+            //        &.tile-41, &.tile-43, &.tile-45, &.tile-47 {
+            //         animation-delay: $animationDelay * 11;
+            //        }
+            //        &.tile-42, &.tile-44, &.tile-46, &.tile-48 {
+            //         animation-delay: $animationDelay * 12 + $evenDelay;
+            //        }
+            //        &.tile-49, &.tile-51, &.tile-53, &.tile-55 {
+            //         animation-delay: $animationDelay * 13;
+            //        }
+            //        &.tile-50, &.tile-52, &.tile-54, &.tile-56 {
+            //         animation-delay: $animationDelay * 14 + $evenDelay;
+            //        }
+            //        &.tile-57, &.tile-59, &.tile-61, &.tile-63 {
+            //         animation-delay: $animationDelay * 15;
+            //        }
+            //        &.tile-58, &.tile-60, &.tile-62, &.tile-64 {
+            //         animation-delay: $animationDelay * 16 + $evenDelay;
+            //        }
+            //     }
+            }
+            @keyframes logoAnimation {
+                0% {
+                    transform: scale(0) translateX(-500px) translateY(500px) translateZ(500px);
+                    opacity: 0;
+                    border-radius: 50%;
                 }
-            }    
+            }
+            // @keyframes logoAnimation2 {
+            //     0% {
+            //         transform: scale(0) skew(90deg) translateX(-550px);
+            //         opacity: 0;
+            //         border-radius: 50%;
+            //     }
+            // }
         }    
     } 
 }
@@ -268,14 +296,9 @@
 
 @media screen and (max-width: 768px) {
     .box-home {
-
+       
         .box-effect {
-            display: flex;
-            justify-content: center;
-            img {
-                width: 60%;
-                height: auto; 
-            }
+            margin-top: 30px;
         }
     }
 }
