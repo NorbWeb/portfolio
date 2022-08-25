@@ -69,7 +69,6 @@
             object-fit: none;
             width: $tile;
             height: $tile;
-            animation: imgAni 3s forwards;
         }
             
         .tile {
@@ -77,14 +76,7 @@
             height: $tile;
             animation: logoAnimation 1.5s both;
             $animationDelay: 0.1s;
-            overflow: hidden;
-
-            // &.1 {
-            //     &:hover {
-            //         transform: scale(1.2);
-            //     }
-            // }
-          
+            overflow: hidden;          
             
             &.tile-2, &.tile-9 {
                 animation-delay: $animationDelay;
@@ -127,6 +119,29 @@
             }
             &.tile-64 {
                 animation-delay: calc($animationDelay * 14);
+            }
+        }
+
+        @for $h from 1 through 64 {
+            // .img-#{$h}.hover-#{$h} {
+            //     transition:  all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            //     // opacity: 0.5;
+            //     animation: pulse 1s both infinite;
+            // }
+            // .img-#{$h}.hover-#{$h}-n {
+            //     transition:  all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); 
+            //     // opacity: 0.8;
+            //     animation: pulse 1s 0.2s both infinite;
+            // }
+            .tile-#{$h}.hover-#{$h} {
+                transition:  all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+                opacity: 0;
+                animation: dummy ;
+            }
+            .tile-#{$h}.hover-#{$h}-n {
+                transition:  all 0.5s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); 
+                opacity: 0;
+                animation: dummy ;
             }
         }
 

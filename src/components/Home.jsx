@@ -7,18 +7,57 @@ import './Styles/Home.scss'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const [hoverTiles, setHoverTiles] = useState([0])
+  const [hoverTiles, setHoverTiles] = useState([''])
 
   const handleMouseOver = (item) => {
-    setHoverTiles([`tile-${item} h`, item - 8, item + 1, item + 8, item -1])
-
+    if (
+      item === 1 ||
+      item === 9 ||
+      item === 17 ||
+      item === 25 ||
+      item === 33 ||
+      item === 41 ||
+      item === 49 ||
+      item === 57
+    ) {
+      setHoverTiles([
+        `hover-${item}`,
+        `hover-${item - 8}-n`,
+        `hover-${item + 1}-n`,
+        `hover-${item + 8}-n`,
+      ])
+    } else if (
+      item === 8 ||
+      item === 16 ||
+      item === 24 ||
+      item === 32 ||
+      item === 40 ||
+      item === 48 ||
+      item === 56 ||
+      item === 64
+    ) {
+      setHoverTiles([
+        `hover-${item}`,
+        `hover-${item - 8}-n`,
+        `hover-${item + 8}-n`,
+        `hover-${item - 1}-n`,
+      ])
+    } else {
+      setHoverTiles([
+        `hover-${item}`,
+        `hover-${item - 8}-n`,
+        `hover-${item + 1}-n`,
+        `hover-${item + 8}-n`,
+        `hover-${item - 1}-n`,
+      ])
+    }
   }
 
   const handleMouseOut = () => {
-    setHoverTiles([0]);
+    setHoverTiles([''])
   }
 
-  console.log(hoverTiles[0]);
+  console.log(hoverTiles)
 
   useEffect(() => {
     setTimeout(() => {
@@ -38,7 +77,6 @@ const Home = () => {
   }
 
   tileNumber(64)
-
 
   return (
     <div className="box-home">
@@ -84,12 +122,12 @@ const Home = () => {
               return (
                 <div
                   key={tile + index}
-                  className={`tile tile-${tile} ${hoverTiles[0]}`}
+                  className={`tile tile-${tile} ${hoverTiles[0]} ${hoverTiles[1]} ${hoverTiles[2]} ${hoverTiles[3]} ${hoverTiles[4]}`}
                   onMouseOver={() => handleMouseOver(tile)}
                   onMouseOut={() => handleMouseOut()}
                 >
                   <img
-                    className={`img-${tile}`}
+                    className={`img-${tile} ${hoverTiles[0]} ${hoverTiles[1]} ${hoverTiles[2]} ${hoverTiles[3]} ${hoverTiles[4]}`}
                     src={Logo400}
                     alt={`Tile ${tile}`}
                   />
