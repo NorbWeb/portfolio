@@ -9,6 +9,8 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const [hoverTiles, setHoverTiles] = useState([''])
 
+  // Set tile to 'hoverTiles' -- tile directly on mouse and tiles on top, right, bottom and left of it
+  // If tile is on edge, it do not take the next tile to it, because it would be on another line
   const handleMouseOver = (item) => {
     if (
       item === 1 ||

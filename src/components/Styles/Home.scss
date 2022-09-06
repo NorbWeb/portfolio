@@ -62,8 +62,9 @@
         display: grid;
         border-radius: 30px;
         gap: 0px;
-
         $tile: calc($length / $squareRoot);
+        transition:  all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      
 
         img {
             object-fit: none;
@@ -124,25 +125,25 @@
 
         @for $h from 1 through 64 {
             // .img-#{$h}.hover-#{$h} {
-            //     transition:  all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
-            //     // opacity: 0.5;
-            //     animation: pulse 1s both infinite;
+            //     transition:  all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            //     opacity: 0.5;
+            //     animation: test 1s both ;
             // }
             // .img-#{$h}.hover-#{$h}-n {
-            //     transition:  all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); 
-            //     // opacity: 0.8;
-            //     animation: pulse 1s 0.2s both infinite;
+            //     transition:  all 1s cubic-bezier(0.645, 0.045, 0.355, 1); 
+            //     opacity: 0.8;
+            //     animation: test 1s 0.2s both ;
             // }
-            .tile-#{$h}.hover-#{$h} {
-                transition:  all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-                opacity: 0;
-                animation: dummy ;
-            }
-            .tile-#{$h}.hover-#{$h}-n {
-                transition:  all 0.5s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); 
-                opacity: 0;
-                animation: dummy ;
-            }
+            // .tile-#{$h}.hover-#{$h} {
+            //     transition:  all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+            //     opacity: 0.5;
+            //     animation: dummy ;
+            // }
+            // .tile-#{$h}.hover-#{$h}-n {
+            //     transition:  all 0.5s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); 
+            //     opacity: 0.5;
+            //     animation: dummy ;
+            // }
         }
 
 
